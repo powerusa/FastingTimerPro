@@ -43,9 +43,9 @@ fun CustomDurationPickerDialog(
         Box(
             modifier = Modifier
                 .clip(RoundedCornerShape(24.dp))
-                .background(AppColors.gradientTop)
+                .background(AppColors.baseBackground)
                 .border(
-                    width = 1.dp,
+                    width = 1.5.dp,
                     color = AppColors.cardBorder,
                     shape = RoundedCornerShape(24.dp)
                 )
@@ -182,7 +182,7 @@ private fun NumberPicker(
                 text = value.toString().padStart(2, '0'),
                 fontSize = 32.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = AppColors.primaryText,
+                color = AppColors.brightRed,
                 modifier = Modifier.width(50.dp),
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center
             )

@@ -33,7 +33,9 @@ struct CustomDurationPicker: View {
 
                         Picker("Days", selection: $days) {
                             ForEach(0..<31) { d in
-                                Text("\(d)").tag(d)
+                                Text("\(d)")
+                                    .foregroundStyle(AppColors.brightRed)
+                                    .tag(d)
                             }
                         }
                         .pickerStyle(.wheel)
@@ -48,7 +50,9 @@ struct CustomDurationPicker: View {
 
                         Picker("Hours", selection: $hours) {
                             ForEach(0..<24) { h in
-                                Text("\(h)").tag(h)
+                                Text("\(h)")
+                                    .foregroundStyle(AppColors.brightRed)
+                                    .tag(h)
                             }
                         }
                         .pickerStyle(.wheel)
@@ -87,13 +91,13 @@ struct CustomDurationPicker: View {
                 }
             }
             .padding(24)
-            .background(AppColors.cardBackground)
+            .background(AppColors.baseBackground.opacity(0.95))
             .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .stroke(AppColors.cardBorder, lineWidth: 1)
+                    .stroke(AppColors.cardBorder, lineWidth: 1.5)
             )
-            .shadow(color: .black.opacity(0.4), radius: 30, x: 0, y: 10)
+            .shadow(color: .black.opacity(0.6), radius: 40, x: 0, y: 15)
             .padding(24)
         }
     }
