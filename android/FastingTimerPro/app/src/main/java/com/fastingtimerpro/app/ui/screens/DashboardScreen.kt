@@ -86,7 +86,7 @@ fun DashboardScreen() {
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        text = "Fasting Timer Pro",
+                        text = "Fasting Timer VIP Pro",
                         fontSize = 28.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = AppColors.primaryText

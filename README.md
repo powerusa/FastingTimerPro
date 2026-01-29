@@ -1,4 +1,4 @@
-# Fasting Timer Pro
+# Fasting Timer VIP Pro
 
 This repo contains two native apps:
 

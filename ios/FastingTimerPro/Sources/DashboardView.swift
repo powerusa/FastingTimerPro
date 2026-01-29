@@ -45,7 +45,7 @@ struct DashboardView: View {
     private var header: some View {
         HStack {
             VStack(alignment: .leading, spacing: 6) {
-                Text("Fasting Timer Pro")
+                Text("Fasting Timer VIP Pro")
                     .font(.system(size: 28, weight: .semibold, design: .rounded))
                     .foregroundStyle(AppColors.primaryText)
 
