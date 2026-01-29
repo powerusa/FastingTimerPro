@@ -49,6 +49,18 @@ After creation:
    - Coroutines
    - (Optional next step) Room + DataStore
 
+## Privacy Policy
+
+Privacy Policy URL for App Store Connect:  
+**https://powerusa.github.io/FastingTimerPro/privacy-policy**
+
+To enable GitHub Pages:
+1. Go to your repo: https://github.com/powerusa/FastingTimerPro
+2. Settings → Pages
+3. Source: Deploy from a branch
+4. Branch: `main`, folder: `/docs`
+5. Save
+
 ## Next implementation steps
 
 After the native shells exist, we’ll implement:
