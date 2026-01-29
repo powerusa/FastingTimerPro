@@ -1,0 +1,5 @@
+package com.fastingtimerpro.app.ui.theme
+
+import androidx.compose.material3.Typography
+
+val Typography = Typography()
