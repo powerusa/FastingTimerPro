@@ -6,6 +6,8 @@ struct DashboardView: View {
     @StateObject private var historyStore = FastingHistoryStore()
     @State private var now = Date()
     @State private var showCustomPicker = false
+    @State private var showCustomStartTimePicker = false
+    @State private var customStartedAt = Date().addingTimeInterval(-4 * 3600)
     @State private var showHistory = false
 
     private let tick = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -34,6 +36,15 @@ struct DashboardView: View {
             if showCustomPicker {
                 CustomDurationPicker(isPresented: $showCustomPicker) { duration in
                     store.startNow(plannedDuration: duration)
+                }
+            }
+
+            if showCustomStartTimePicker {
+                RetroactiveStartTimePicker(isPresented: $showCustomStartTimePicker, initialStartedAt: customStartedAt) { startedAt in
+                    store.startRetroactive(
+                        startedAt: startedAt,
+                        plannedDuration: 16 * 3600
+                    )
                 }
             }
         }
@@ -69,22 +80,26 @@ struct DashboardView: View {
     @ViewBuilder
     private func activeSessionView(_ session: FastingSession) -> some View {
         let progress = FastingProgressCalculator.compute(session: session, now: now)
+        let isRetroactive = session.startMode == .retroactive
+        let ringTime = isRetroactive ? progress.elapsed : progress.remaining
+        let ringSubtitle = isRetroactive ? "custom time" : "remaining"
+        let plannedLabel = session.startMode == .retroactive ? "Custom time" : formatPlannedDuration(session.plannedDuration)
 
         VStack(spacing: 20) {
             ZStack {
                 ProgressRing(progress: progress.progress01, lineWidth: 14, size: 220)
 
                 VStack(spacing: 6) {
-                    Text(TimeFormat.hhmmss(progress.remaining))
+                    Text(TimeFormat.hhmmss(ringTime))
                         .font(.system(size: 42, weight: .semibold, design: .rounded))
                         .foregroundStyle(AppColors.primaryText)
                         .monospacedDigit()
 
-                    Text("remaining")
+                    Text(ringSubtitle)
                         .font(.system(size: 14, weight: .medium))
                         .foregroundStyle(AppColors.secondaryText)
 
-                    Text(formatPlannedDuration(session.plannedDuration))
+                    Text(plannedLabel)
                         .font(.system(size: 12, weight: .regular))
                         .foregroundStyle(AppColors.brightRed)
                 }
@@ -200,12 +215,10 @@ struct DashboardView: View {
             }
 
             Button {
-                store.startRetroactive(
-                    startedAt: Date().addingTimeInterval(-4 * 3600),
-                    plannedDuration: 16 * 3600
-                )
+                customStartedAt = Date().addingTimeInterval(-4 * 3600)
+                showCustomStartTimePicker = true
             } label: {
-                Text("I already started (4h ago)")
+                Text("I already started (Custom time)")
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(GlassPillButtonStyle())

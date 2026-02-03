@@ -49,7 +49,7 @@ struct CustomDurationPicker: View {
                             .foregroundStyle(AppColors.secondaryText)
 
                         Picker("Hours", selection: $hours) {
-                            ForEach(0..<24) { h in
+                            ForEach(0..<25) { h in
                                 Text("\(h)")
                                     .foregroundStyle(AppColors.brightRed)
                                     .tag(h)
