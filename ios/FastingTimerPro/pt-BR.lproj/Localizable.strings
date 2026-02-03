@@ -1,0 +1,90 @@
+"app.title" = "Fasting Timer VIP Pro +";
+"app.subtitle" = "Apenas acompanhamento educacional. Sem aconselhamento médico.";
+
+"common.cancel" = "Cancelar";
+"common.custom" = "Personalizado";
+"common.done" = "OK";
+"common.start_fast" = "Iniciar jejum";
+"common.stop" = "Parar";
+
+"dashboard.ring.remaining" = "restante";
+"dashboard.ring.custom_time" = "hora personalizada";
+"dashboard.planned.custom_time" = "Hora personalizada";
+"dashboard.elapsed_format" = "Decorrido: %@";
+"dashboard.body.title" = "O que está acontecendo no seu corpo";
+"dashboard.extended_tracking_only" = "Jejuns prolongados são acompanhados apenas para fins educacionais.";
+"dashboard.next_prefix" = "Próximo:";
+"dashboard.start.title" = "Iniciar um jejum";
+"dashboard.start.subtitle" = "Escolha uma duração alvo. Você pode estender a qualquer momento.";
+"dashboard.already_started_custom" = "Eu já comecei (Hora personalizada)";
+"dashboard.extend_hours_format" = "+%dh";
+
+"planned_duration.fast_format" = "Jejum de %@";
+
+"custom_duration.title" = "Duração personalizada";
+"custom_duration.subtitle" = "Defina seu tempo alvo de jejum";
+"custom_duration.days" = "Dias";
+"custom_duration.hours" = "Horas";
+"custom_duration.total_format" = "Total: %@";
+
+"retroactive_picker.title" = "Hora de início";
+"retroactive_picker.subtitle" = "Selecione quando você começou o jejum";
+"retroactive_picker.hours_ago" = "Horas atrás";
+
+"history.title" = "Histórico";
+"history.clear" = "Limpar";
+"history.empty.title" = "Nenhum jejum ainda";
+"history.empty.subtitle" = "Seus jejuns concluídos aparecerão aqui";
+"history.row.planned_format" = "/ %@";
+
+"settings.title" = "Configurações";
+"settings.language" = "Idioma";
+"settings.use_device_language" = "Usar idioma do dispositivo";
+
+"stages.digesting.title" = "Digestão";
+"stages.digesting.line1" = "Seu corpo está digerindo a última refeição.";
+"stages.digesting.line2" = "Glicose e insulina estão elevadas.";
+"stages.digesting.line3" = "A energia vem principalmente da alimentação.";
+"stages.digesting.line4" = "Esta fase é sobre digestão e absorção de nutrientes.";
+
+"stages.blood_sugar.title" = "Estabilização da glicose";
+"stages.blood_sugar.line1" = "Os níveis de insulina começam a cair.";
+"stages.blood_sugar.line2" = "A glicose no sangue fica mais estável.";
+"stages.blood_sugar.line3" = "O corpo transita do estado alimentado para o jejum.";
+"stages.blood_sugar.line4" = "A fome pode aparecer conforme a insulina diminui.";
+
+"stages.fat_burning.title" = "Queima de gordura";
+"stages.fat_burning.line1" = "O glicogênio (açúcar armazenado) diminui.";
+"stages.fat_burning.line2" = "O corpo usa cada vez mais gordura como energia.";
+"stages.fat_burning.line3" = "O hormônio do crescimento começa a aumentar.";
+"stages.fat_burning.line4" = "Muitas pessoas notam melhor foco mental.";
+
+"stages.metabolic_switching.title" = "Mudança metabólica";
+"stages.metabolic_switching.line1" = "A queima de gordura fica mais eficiente.";
+"stages.metabolic_switching.line2" = "A produção de cetonas começa a aumentar.";
+"stages.metabolic_switching.line3" = "A insulina permanece baixa.";
+"stages.metabolic_switching.line4" = "A energia pode parecer estável e calma.";
+
+"stages.ketosis.title" = "Cetose e limpeza celular";
+"stages.ketosis.line1" = "A cetose se aprofunda.";
+"stages.ketosis.line2" = "O corpo depende mais de gordura e cetonas.";
+"stages.ketosis.line3" = "Processos de reciclagem celular aumentam.";
+"stages.ketosis.line4" = "Processos inflamatórios podem reduzir.";
+
+"stages.repair_mode.title" = "Modo de reparo";
+"stages.repair_mode.line1" = "O hormônio do crescimento está elevado.";
+"stages.repair_mode.line2" = "Processos de manutenção celular continuam.";
+"stages.repair_mode.line3" = "A utilização de gordura permanece alta.";
+"stages.repair_mode.line4" = "Muitos relatam clareza mental e foco calmo.";
+
+"stages.deep_fasting.title" = "Jejum profundo";
+"stages.deep_fasting.line1" = "O corpo se adapta ao jejum prolongado.";
+"stages.deep_fasting.line2" = "A eficiência energética melhora.";
+"stages.deep_fasting.line3" = "A renovação celular continua ativa.";
+"stages.deep_fasting.line4" = "As reservas de gordura são a principal energia.";
+
+"stages.extended.title" = "Jejum prolongado (Apenas acompanhamento)";
+"stages.extended.line1" = "O corpo opera em um estado de jejum de longo prazo.";
+"stages.extended.line2" = "O uso de energia se estabiliza.";
+"stages.extended.line3" = "Mudanças ocorrem mais devagar e de forma constante.";
+"stages.extended.line4" = "Este app oferece apenas acompanhamento educacional.";

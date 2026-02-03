@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Fasting Timer VIP Pro +</string>
+    <string name="app_subtitle">Suivi éducatif uniquement. Aucun avis médical.</string>
+
+    <string name="common_cancel">Annuler</string>
+    <string name="common_custom">Personnalisé</string>
+    <string name="common_done">OK</string>
+    <string name="common_start_fast">Démarrer</string>
+    <string name="common_stop">Arrêter</string>
+
+    <string name="dashboard_ring_remaining">restant</string>
+    <string name="dashboard_ring_custom_time">heure personnalisée</string>
+    <string name="dashboard_elapsed_format">Écoulé : %1$s</string>
+    <string name="dashboard_body_title">Ce qui se passe dans votre corps</string>
+    <string name="dashboard_extended_tracking_only">Les jeûnes prolongés sont suivis à des fins éducatives uniquement.</string>
+    <string name="dashboard_next_prefix">Suivant :</string>
+    <string name="dashboard_start_title">Démarrer un jeûne</string>
+    <string name="dashboard_start_subtitle">Choisissez une durée cible. Vous pouvez prolonger à tout moment.</string>
+    <string name="dashboard_already_started_custom">J\'ai déjà commencé (Heure personnalisée)</string>
+    <string name="dashboard_extend_hours_format">+%1$dh</string>
+    <string name="dashboard_hours_format">%1$dh</string>
+
+    <string name="planned_duration_fast_format">Jeûne de %1$s</string>
+
+    <string name="custom_duration_title">Durée personnalisée</string>
+    <string name="custom_duration_subtitle">Définissez votre durée de jeûne</string>
+    <string name="custom_duration_days">Jours</string>
+    <string name="custom_duration_hours">Heures</string>
+    <string name="custom_duration_total_format">Total : %1$s</string>
+
+    <string name="retroactive_picker_title">Heure de début</string>
+    <string name="retroactive_picker_subtitle">Sélectionnez quand vous avez commencé</string>
+    <string name="retroactive_picker_hours_ago">Il y a (heures)</string>
+
+    <string name="history_title">Historique</string>
+    <string name="history_clear">Effacer</string>
+    <string name="history_empty_title">Aucun jeûne</string>
+    <string name="history_empty_subtitle">Vos jeûnes terminés apparaîtront ici</string>
+    <string name="history_row_planned_format">/ %1$s</string>
+
+    <string name="settings_title">Réglages</string>
+    <string name="settings_language">Langue</string>
+    <string name="settings_use_device_language">Utiliser la langue de l\'appareil</string>
+
+    <string name="stages_digesting_title">Digestion</string>
+    <string name="stages_digesting_line1">Votre corps digère le dernier repas.</string>
+    <string name="stages_digesting_line2">La glycémie et l\'insuline sont élevées.</string>
+    <string name="stages_digesting_line3">L\'énergie provient principalement de l\'alimentation.</string>
+    <string name="stages_digesting_line4">Cette phase concerne la digestion et l\'absorption.</string>
+
+    <string name="stages_blood_sugar_title">Stabilisation de la glycémie</string>
+    <string name="stages_blood_sugar_line1">L\'insuline commence à diminuer.</string>
+    <string name="stages_blood_sugar_line2">La glycémie devient plus stable.</string>
+    <string name="stages_blood_sugar_line3">Le corps passe vers l\'état de jeûne.</string>
+    <string name="stages_blood_sugar_line4">La faim peut apparaître quand l\'insuline baisse.</string>
+
+    <string name="stages_fat_burning_title">Début de la combustion des graisses</string>
+    <string name="stages_fat_burning_line1">Le glycogène diminue.</string>
+    <string name="stages_fat_burning_line2">Le corps utilise davantage les graisses.</string>
+    <string name="stages_fat_burning_line3">L\'hormone de croissance augmente.</string>
+    <string name="stages_fat_burning_line4">Beaucoup ressentent une meilleure concentration.</string>
+
+    <string name="stages_metabolic_switching_title">Bascule métabolique</string>
+    <string name="stages_metabolic_switching_line1">La combustion des graisses devient plus efficace.</string>
+    <string name="stages_metabolic_switching_line2">La production de cétones augmente.</string>
+    <string name="stages_metabolic_switching_line3">L\'insuline reste basse.</string>
+    <string name="stages_metabolic_switching_line4">L\'énergie peut être stable et calme.</string>
+
+    <string name="stages_ketosis_title">Cétose et nettoyage cellulaire</string>
+    <string name="stages_ketosis_line1">La cétose s\'approfondit.</string>
+    <string name="stages_ketosis_line2">Le corps dépend davantage des graisses et cétones.</string>
+    <string name="stages_ketosis_line3">Le recyclage cellulaire augmente.</string>
+    <string name="stages_ketosis_line4">L\'inflammation peut diminuer.</string>
+
+    <string name="stages_repair_mode_title">Mode réparation</string>
+    <string name="stages_repair_mode_line1">L\'hormone de croissance est élevée.</string>
+    <string name="stages_repair_mode_line2">La maintenance cellulaire continue.</string>
+    <string name="stages_repair_mode_line3">L\'utilisation des graisses reste élevée.</string>
+    <string name="stages_repair_mode_line4">Beaucoup rapportent clarté et calme.</string>
+
+    <string name="stages_deep_fasting_title">Jeûne profond</string>
+    <string name="stages_deep_fasting_line1">Le corps s\'adapte au jeûne prolongé.</string>
+    <string name="stages_deep_fasting_line2">L\'efficacité énergétique s\'améliore.</string>
+    <string name="stages_deep_fasting_line3">Le renouvellement cellulaire reste actif.</string>
+    <string name="stages_deep_fasting_line4">Les réserves de graisse sont la principale énergie.</string>
+
+    <string name="stages_extended_title">Jeûne prolongé (Suivi uniquement)</string>
+    <string name="stages_extended_line1">Le corps fonctionne dans un état de jeûne prolongé.</string>
+    <string name="stages_extended_line2">L\'utilisation d\'énergie se stabilise.</string>
+    <string name="stages_extended_line3">Les changements se produisent plus lentement.</string>
+    <string name="stages_extended_line4">Cette app fournit un suivi éducatif uniquement.</string>
+</resources>

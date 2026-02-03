@@ -2,6 +2,8 @@ import SwiftUI
 
 struct DashboardView: View {
 
+    @EnvironmentObject private var localization: LocalizationManager
+
     @StateObject private var store = FastingSessionStore()
     @StateObject private var historyStore = FastingHistoryStore()
     @State private var now = Date()
@@ -9,6 +11,7 @@ struct DashboardView: View {
     @State private var showCustomStartTimePicker = false
     @State private var customStartedAt = Date().addingTimeInterval(-4 * 3600)
     @State private var showHistory = false
+    @State private var showSettings = false
 
     private let tick = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -37,6 +40,7 @@ struct DashboardView: View {
                 CustomDurationPicker(isPresented: $showCustomPicker) { duration in
                     store.startNow(plannedDuration: duration)
                 }
+                .environmentObject(localization)
             }
 
             if showCustomStartTimePicker {
@@ -46,33 +50,49 @@ struct DashboardView: View {
                         plannedDuration: 16 * 3600
                     )
                 }
+                .environmentObject(localization)
             }
         }
         .sheet(isPresented: $showHistory) {
             HistoryView(historyStore: historyStore)
+                .environmentObject(localization)
+        }
+        .sheet(isPresented: $showSettings) {
+            SettingsView()
+                .environmentObject(localization)
         }
     }
 
     private var header: some View {
         HStack {
             VStack(alignment: .leading, spacing: 6) {
-                Text("Fasting Timer VIP Pro +")
+                Text(localization.t("app.title"))
                     .font(.system(size: 28, weight: .semibold, design: .rounded))
                     .foregroundStyle(AppColors.primaryText)
 
-                Text("Educational tracking only. No medical advice.")
+                Text(localization.t("app.subtitle"))
                     .font(.system(size: 13, weight: .regular))
                     .foregroundStyle(AppColors.secondaryText)
             }
 
             Spacer()
 
-            Button {
-                showHistory = true
-            } label: {
-                Image(systemName: "clock.arrow.circlepath")
-                    .font(.system(size: 22))
-                    .foregroundStyle(AppColors.primaryAccent)
+            HStack(spacing: 12) {
+                Button {
+                    showSettings = true
+                } label: {
+                    Image(systemName: "gearshape")
+                        .font(.system(size: 20))
+                        .foregroundStyle(AppColors.primaryAccent)
+                }
+
+                Button {
+                    showHistory = true
+                } label: {
+                    Image(systemName: "clock.arrow.circlepath")
+                        .font(.system(size: 22))
+                        .foregroundStyle(AppColors.primaryAccent)
+                }
             }
         }
     }
@@ -82,8 +102,10 @@ struct DashboardView: View {
         let progress = FastingProgressCalculator.compute(session: session, now: now)
         let isRetroactive = session.startMode == .retroactive
         let ringTime = isRetroactive ? progress.elapsed : progress.remaining
-        let ringSubtitle = isRetroactive ? "custom time" : "remaining"
-        let plannedLabel = session.startMode == .retroactive ? "Custom time" : formatPlannedDuration(session.plannedDuration)
+        let ringSubtitle = isRetroactive ? localization.t("dashboard.ring.custom_time") : localization.t("dashboard.ring.remaining")
+        let plannedLabel = session.startMode == .retroactive ? localization.t("dashboard.planned.custom_time") : formatPlannedDuration(session.plannedDuration)
+        let stageTitle = localization.t(progress.currentStage.titleKey)
+        let stageDescription = progress.currentStage.descriptionKeys.map { localization.t($0) }.joined(separator: "\n")
 
         VStack(spacing: 20) {
             ZStack {
@@ -108,7 +130,7 @@ struct DashboardView: View {
 
             GlassCard {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Elapsed: \(TimeFormat.hhmmss(progress.elapsed))")
+                    Text(localization.tf("dashboard.elapsed_format", TimeFormat.hhmmss(progress.elapsed)))
                         .font(.system(size: 16, weight: .medium))
                         .foregroundStyle(AppColors.primaryText)
                         .monospacedDigit()
@@ -118,21 +140,21 @@ struct DashboardView: View {
 
             GlassCard {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("What's happening in your body")
+                    Text(localization.t("dashboard.body.title"))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundStyle(AppColors.secondaryText)
 
-                    Text(progress.currentStage.title)
+                    Text(stageTitle)
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundStyle(AppColors.primaryAccent)
 
-                    Text(progress.currentStage.descriptionLines.joined(separator: "\n"))
+                    Text(stageDescription)
                         .font(.system(size: 15, weight: .regular))
                         .foregroundStyle(AppColors.primaryText.opacity(0.9))
                         .fixedSize(horizontal: false, vertical: true)
 
                     if progress.currentStage.isExtendedTrackingOnly {
-                        Text("Extended fasts are tracked for educational purposes only.")
+                        Text(localization.t("dashboard.extended_tracking_only"))
                             .font(.system(size: 13, weight: .regular))
                             .foregroundStyle(AppColors.mutedText)
                             .padding(.top, 6)
@@ -142,12 +164,13 @@ struct DashboardView: View {
             }
 
             if let next = progress.nextStage {
+                let nextTitle = localization.t(next.titleKey)
                 GlassCard {
                     HStack {
-                        Text("Next:")
+                        Text(localization.t("dashboard.next_prefix"))
                             .font(.system(size: 14, weight: .medium))
                             .foregroundStyle(AppColors.secondaryText)
-                        Text(next.title)
+                        Text(nextTitle)
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundStyle(AppColors.secondaryAccent)
                     }
@@ -157,12 +180,12 @@ struct DashboardView: View {
 
             HStack(spacing: 12) {
                 Button { store.extendActive(by: 3600) } label: {
-                    Text("+1h").frame(maxWidth: .infinity)
+                    Text(localization.tf("dashboard.extend_hours_format", 1)).frame(maxWidth: .infinity)
                 }
                 .buttonStyle(GlassPillButtonStyle())
 
                 Button { store.extendActive(by: 6 * 3600) } label: {
-                    Text("+6h").frame(maxWidth: .infinity)
+                    Text(localization.tf("dashboard.extend_hours_format", 6)).frame(maxWidth: .infinity)
                 }
                 .buttonStyle(GlassPillButtonStyle())
 
@@ -172,7 +195,7 @@ struct DashboardView: View {
                     }
                     store.stopActive()
                 } label: {
-                    Text("Stop").frame(maxWidth: .infinity)
+                    Text(localization.t("common.stop")).frame(maxWidth: .infinity)
                 }
                 .buttonStyle(GlassPillButtonStyle(isDestructive: true))
             }
@@ -183,11 +206,11 @@ struct DashboardView: View {
         VStack(spacing: 16) {
             GlassCard {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Start a fast")
+                    Text(localization.t("dashboard.start.title"))
                         .font(.system(size: 18, weight: .semibold))
                         .foregroundStyle(AppColors.primaryText)
 
-                    Text("Choose a target duration. You can extend anytime.")
+                    Text(localization.t("dashboard.start.subtitle"))
                         .font(.system(size: 14, weight: .regular))
                         .foregroundStyle(AppColors.secondaryText)
                 }
@@ -208,7 +231,7 @@ struct DashboardView: View {
                 Button {
                     showCustomPicker = true
                 } label: {
-                    Text("Custom")
+                    Text(localization.t("common.custom"))
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(GlassPillButtonStyle())
@@ -218,7 +241,7 @@ struct DashboardView: View {
                 customStartedAt = Date().addingTimeInterval(-4 * 3600)
                 showCustomStartTimePicker = true
             } label: {
-                Text("I already started (Custom time)")
+                Text(localization.t("dashboard.already_started_custom"))
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(GlassPillButtonStyle())
@@ -226,15 +249,14 @@ struct DashboardView: View {
     }
 
     private func formatPlannedDuration(_ duration: TimeInterval) -> String {
-        let totalHours = Int(duration) / 3600
-        if totalHours >= 24 {
-            let days = totalHours / 24
-            let hours = totalHours % 24
-            if hours > 0 {
-                return "\(days) day\(days == 1 ? "" : "s") \(hours) hour\(hours == 1 ? "" : "s") fast"
-            }
-            return "\(days) day\(days == 1 ? "" : "s") fast"
-        }
-        return "\(totalHours) hour\(totalHours == 1 ? "" : "s") fast"
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = duration >= 24 * 3600 ? [.day, .hour] : [.hour]
+        formatter.unitsStyle = .full
+        formatter.maximumUnitCount = 2
+        formatter.zeroFormattingBehavior = [.dropAll]
+        formatter.calendar = Calendar.current
+        formatter.calendar?.locale = Locale(identifier: localization.effectiveLocaleId)
+        let formatted = formatter.string(from: duration) ?? ""
+        return localization.tf("planned_duration.fast_format", formatted)
     }
 }

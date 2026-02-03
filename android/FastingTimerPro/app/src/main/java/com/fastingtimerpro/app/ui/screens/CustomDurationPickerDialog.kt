@@ -28,6 +28,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.res.stringResource
+import com.fastingtimerpro.app.R
 import com.fastingtimerpro.app.ui.theme.AppColors
 import java.time.Duration
 
@@ -55,7 +57,7 @@ fun CustomDurationPickerDialog(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = "Custom Fast Duration",
+                    text = stringResource(R.string.custom_duration_title),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = AppColors.primaryText
@@ -64,7 +66,7 @@ fun CustomDurationPickerDialog(
                 Spacer(modifier = Modifier.height(8.dp))
 
                 Text(
-                    text = "Set your target fasting time",
+                    text = stringResource(R.string.custom_duration_subtitle),
                     fontSize = 14.sp,
                     color = AppColors.secondaryText
                 )
@@ -76,14 +78,14 @@ fun CustomDurationPickerDialog(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     NumberPicker(
-                        label = "Days",
+                        label = stringResource(R.string.custom_duration_days),
                         value = days,
                         range = 0..30,
                         onValueChange = { days = it }
                     )
 
                     NumberPicker(
-                        label = "Hours",
+                        label = stringResource(R.string.custom_duration_hours),
                         value = hours,
                         range = 0..23,
                         onValueChange = { hours = it }
@@ -93,10 +95,11 @@ fun CustomDurationPickerDialog(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 val totalHours = days * 24 + hours
+                val totalText = if (days > 0 && hours > 0) "${days}d ${hours}h"
+                           else if (days > 0) "${days}d"
+                           else "${hours}h"
                 Text(
-                    text = if (days > 0 && hours > 0) "Total: ${days}d ${hours}h"
-                           else if (days > 0) "Total: $days day${if (days == 1) "" else "s"}"
-                           else "Total: $hours hour${if (hours == 1) "" else "s"}",
+                    text = stringResource(R.string.custom_duration_total_format, totalText),
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
                     color = AppColors.primaryAccent
@@ -117,7 +120,7 @@ fun CustomDurationPickerDialog(
                         shape = RoundedCornerShape(999.dp)
                     ) {
                         Text(
-                            text = "Cancel",
+                            text = stringResource(R.string.common_cancel),
                             color = AppColors.primaryText,
                             fontWeight = FontWeight.SemiBold
                         )
@@ -138,7 +141,7 @@ fun CustomDurationPickerDialog(
                         shape = RoundedCornerShape(999.dp)
                     ) {
                         Text(
-                            text = "Start Fast",
+                            text = stringResource(R.string.common_start_fast),
                             color = AppColors.primaryText,
                             fontWeight = FontWeight.SemiBold
                         )

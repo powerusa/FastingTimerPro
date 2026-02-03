@@ -1,0 +1,90 @@
+"app.title" = "Fasting Timer VIP Pro +";
+"app.subtitle" = "教育目的の記録のみ。医療アドバイスではありません。";
+
+"common.cancel" = "キャンセル";
+"common.custom" = "カスタム";
+"common.done" = "完了";
+"common.start_fast" = "開始";
+"common.stop" = "停止";
+
+"dashboard.ring.remaining" = "残り";
+"dashboard.ring.custom_time" = "カスタム時間";
+"dashboard.planned.custom_time" = "カスタム時間";
+"dashboard.elapsed_format" = "経過: %@";
+"dashboard.body.title" = "体の中で起きていること";
+"dashboard.extended_tracking_only" = "長時間の断食は教育目的でのみ記録されます。";
+"dashboard.next_prefix" = "次:";
+"dashboard.start.title" = "断食を開始";
+"dashboard.start.subtitle" = "目標時間を選択してください。いつでも延長できます。";
+"dashboard.already_started_custom" = "すでに開始 (カスタム時間)";
+"dashboard.extend_hours_format" = "+%d時間";
+
+"planned_duration.fast_format" = "%@ 断食";
+
+"custom_duration.title" = "カスタム断食時間";
+"custom_duration.subtitle" = "目標の断食時間を設定";
+"custom_duration.days" = "日";
+"custom_duration.hours" = "時間";
+"custom_duration.total_format" = "合計: %@";
+
+"retroactive_picker.title" = "開始時間";
+"retroactive_picker.subtitle" = "いつ開始したか選択してください";
+"retroactive_picker.hours_ago" = "何時間前";
+
+"history.title" = "履歴";
+"history.clear" = "クリア";
+"history.empty.title" = "まだありません";
+"history.empty.subtitle" = "完了した断食がここに表示されます";
+"history.row.planned_format" = "/ %@";
+
+"settings.title" = "設定";
+"settings.language" = "言語";
+"settings.use_device_language" = "端末の言語を使用";
+
+"stages.digesting.title" = "消化中";
+"stages.digesting.line1" = "体は最後の食事を消化しています。";
+"stages.digesting.line2" = "血糖値とインスリンが高い状態です。";
+"stages.digesting.line3" = "主なエネルギー源は食事です。";
+"stages.digesting.line4" = "この段階は消化と栄養吸収です。";
+
+"stages.blood_sugar.title" = "血糖の安定";
+"stages.blood_sugar.line1" = "インスリンが下がり始めます。";
+"stages.blood_sugar.line2" = "血糖が安定してきます。";
+"stages.blood_sugar.line3" = "体が断食状態へ移行します。";
+"stages.blood_sugar.line4" = "インスリン低下で空腹を感じることがあります。";
+
+"stages.fat_burning.title" = "脂肪燃焼開始";
+"stages.fat_burning.line1" = "グリコーゲンが減少します。";
+"stages.fat_burning.line2" = "脂肪がエネルギーとして使われ始めます。";
+"stages.fat_burning.line3" = "成長ホルモンが増え始めます。";
+"stages.fat_burning.line4" = "集中力が上がる人もいます。";
+
+"stages.metabolic_switching.title" = "代謝の切り替え";
+"stages.metabolic_switching.line1" = "脂肪燃焼がより効率的になります。";
+"stages.metabolic_switching.line2" = "ケトン体の産生が増えます。";
+"stages.metabolic_switching.line3" = "インスリンは低いままです。";
+"stages.metabolic_switching.line4" = "安定した落ち着いたエネルギーを感じることがあります。";
+
+"stages.ketosis.title" = "ケトーシスと細胞の掃除";
+"stages.ketosis.line1" = "ケトーシスが深まります。";
+"stages.ketosis.line2" = "脂肪とケトン体への依存が高まります。";
+"stages.ketosis.line3" = "細胞のリサイクルが増えます。";
+"stages.ketosis.line4" = "炎症関連のプロセスが減る可能性があります。";
+
+"stages.repair_mode.title" = "修復モード";
+"stages.repair_mode.line1" = "成長ホルモンが高い状態です。";
+"stages.repair_mode.line2" = "細胞のメンテナンスが続きます。";
+"stages.repair_mode.line3" = "脂肪利用が高いままです。";
+"stages.repair_mode.line4" = "頭が冴えると感じる人もいます。";
+
+"stages.deep_fasting.title" = "深い断食状態";
+"stages.deep_fasting.line1" = "体が長時間の断食に適応します。";
+"stages.deep_fasting.line2" = "エネルギー効率が改善します。";
+"stages.deep_fasting.line3" = "細胞の更新が続きます。";
+"stages.deep_fasting.line4" = "脂肪が主なエネルギー源になります。";
+
+"stages.extended.title" = "長時間断食 (記録のみ)";
+"stages.extended.line1" = "体は長期断食状態で動作します。";
+"stages.extended.line2" = "エネルギー使用が安定します。";
+"stages.extended.line3" = "変化はゆっくり進みます。";
+"stages.extended.line4" = "このアプリは教育目的の記録のみです。";

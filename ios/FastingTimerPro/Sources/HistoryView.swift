@@ -4,6 +4,7 @@ struct HistoryView: View {
 
     @ObservedObject var historyStore: FastingHistoryStore
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var localization: LocalizationManager
 
     var body: some View {
         ZStack {
@@ -42,7 +43,7 @@ struct HistoryView: View {
 
             Spacer()
 
-            Text("History")
+            Text(localization.t("history.title"))
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .foregroundStyle(AppColors.primaryText)
 
@@ -52,7 +53,7 @@ struct HistoryView: View {
                 Button {
                     historyStore.clearHistory()
                 } label: {
-                    Text("Clear")
+                    Text(localization.t("history.clear"))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundStyle(AppColors.secondaryText)
                 }
@@ -72,11 +73,11 @@ struct HistoryView: View {
                 .font(.system(size: 48))
                 .foregroundStyle(AppColors.mutedText)
 
-            Text("No fasts yet")
+            Text(localization.t("history.empty.title"))
                 .font(.system(size: 18, weight: .semibold))
                 .foregroundStyle(AppColors.primaryText)
 
-            Text("Your completed fasts will appear here")
+            Text(localization.t("history.empty.subtitle"))
                 .font(.system(size: 14))
                 .foregroundStyle(AppColors.secondaryText)
 
@@ -90,20 +91,22 @@ struct HistoryRow: View {
     let fast: CompletedFast
     let onDelete: () -> Void
 
+    @EnvironmentObject private var localization: LocalizationManager
+
     var body: some View {
         GlassCard {
             HStack {
                 VStack(alignment: .leading, spacing: 6) {
-                    Text(fast.formattedDate)
+                    Text(formattedDate(fast.startTime))
                         .font(.system(size: 14, weight: .medium))
                         .foregroundStyle(AppColors.secondaryText)
 
                     HStack(spacing: 8) {
-                        Text(fast.formattedActualDuration)
+                        Text(formattedDuration(fast.actualDuration))
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundStyle(AppColors.primaryText)
 
-                        Text("/ \(fast.formattedPlannedDuration)")
+                        Text(localization.tf("history.row.planned_format", formattedDuration(fast.plannedDuration)))
                             .font(.system(size: 14, weight: .medium))
                             .foregroundStyle(AppColors.mutedText)
                     }
@@ -120,5 +123,24 @@ struct HistoryRow: View {
                 }
             }
         }
+    }
+
+    private func formattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: localization.effectiveLocaleId)
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter.string(from: date)
+    }
+
+    private func formattedDuration(_ seconds: TimeInterval) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = seconds >= 24 * 3600 ? [.day, .hour, .minute] : [.hour, .minute]
+        formatter.unitsStyle = .abbreviated
+        formatter.maximumUnitCount = 3
+        formatter.zeroFormattingBehavior = [.dropAll]
+        formatter.calendar = Calendar.current
+        formatter.calendar?.locale = Locale(identifier: localization.effectiveLocaleId)
+        return formatter.string(from: seconds) ?? ""
     }
 }

@@ -1,0 +1,90 @@
+"app.title" = "Fasting Timer VIP Pro +";
+"app.subtitle" = "Suivi éducatif uniquement. Aucun avis médical.";
+
+"common.cancel" = "Annuler";
+"common.custom" = "Personnalisé";
+"common.done" = "OK";
+"common.start_fast" = "Démarrer";
+"common.stop" = "Arrêter";
+
+"dashboard.ring.remaining" = "restant";
+"dashboard.ring.custom_time" = "heure personnalisée";
+"dashboard.planned.custom_time" = "Heure personnalisée";
+"dashboard.elapsed_format" = "Écoulé : %@";
+"dashboard.body.title" = "Ce qui se passe dans votre corps";
+"dashboard.extended_tracking_only" = "Les jeûnes prolongés sont suivis à des fins éducatives uniquement.";
+"dashboard.next_prefix" = "Suivant :";
+"dashboard.start.title" = "Démarrer un jeûne";
+"dashboard.start.subtitle" = "Choisissez une durée cible. Vous pouvez prolonger à tout moment.";
+"dashboard.already_started_custom" = "J'ai déjà commencé (Heure personnalisée)";
+"dashboard.extend_hours_format" = "+%dh";
+
+"planned_duration.fast_format" = "Jeûne de %@";
+
+"custom_duration.title" = "Durée personnalisée";
+"custom_duration.subtitle" = "Définissez votre durée de jeûne";
+"custom_duration.days" = "Jours";
+"custom_duration.hours" = "Heures";
+"custom_duration.total_format" = "Total : %@";
+
+"retroactive_picker.title" = "Heure de début";
+"retroactive_picker.subtitle" = "Sélectionnez quand vous avez commencé";
+"retroactive_picker.hours_ago" = "Il y a (heures)";
+
+"history.title" = "Historique";
+"history.clear" = "Effacer";
+"history.empty.title" = "Aucun jeûne";
+"history.empty.subtitle" = "Vos jeûnes terminés apparaîtront ici";
+"history.row.planned_format" = "/ %@";
+
+"settings.title" = "Réglages";
+"settings.language" = "Langue";
+"settings.use_device_language" = "Utiliser la langue de l’appareil";
+
+"stages.digesting.title" = "Digestion";
+"stages.digesting.line1" = "Votre corps digère le dernier repas.";
+"stages.digesting.line2" = "La glycémie et l’insuline sont élevées.";
+"stages.digesting.line3" = "L’énergie provient principalement de l’alimentation.";
+"stages.digesting.line4" = "Cette phase concerne la digestion et l’absorption.";
+
+"stages.blood_sugar.title" = "Stabilisation de la glycémie";
+"stages.blood_sugar.line1" = "L’insuline commence à diminuer.";
+"stages.blood_sugar.line2" = "La glycémie devient plus stable.";
+"stages.blood_sugar.line3" = "Le corps passe vers l’état de jeûne.";
+"stages.blood_sugar.line4" = "La faim peut apparaître quand l’insuline baisse.";
+
+"stages.fat_burning.title" = "Début de la combustion des graisses";
+"stages.fat_burning.line1" = "Le glycogène diminue.";
+"stages.fat_burning.line2" = "Le corps utilise davantage les graisses.";
+"stages.fat_burning.line3" = "L’hormone de croissance augmente.";
+"stages.fat_burning.line4" = "Beaucoup ressentent une meilleure concentration.";
+
+"stages.metabolic_switching.title" = "Bascule métabolique";
+"stages.metabolic_switching.line1" = "La combustion des graisses devient plus efficace.";
+"stages.metabolic_switching.line2" = "La production de cétones augmente.";
+"stages.metabolic_switching.line3" = "L’insuline reste basse.";
+"stages.metabolic_switching.line4" = "L’énergie peut être stable et calme.";
+
+"stages.ketosis.title" = "Cétose et nettoyage cellulaire";
+"stages.ketosis.line1" = "La cétose s’approfondit.";
+"stages.ketosis.line2" = "Le corps dépend davantage des graisses et cétones.";
+"stages.ketosis.line3" = "Le recyclage cellulaire augmente.";
+"stages.ketosis.line4" = "L’inflammation peut diminuer.";
+
+"stages.repair_mode.title" = "Mode réparation";
+"stages.repair_mode.line1" = "L’hormone de croissance est élevée.";
+"stages.repair_mode.line2" = "La maintenance cellulaire continue.";
+"stages.repair_mode.line3" = "L’utilisation des graisses reste élevée.";
+"stages.repair_mode.line4" = "Beaucoup rapportent clarté et calme.";
+
+"stages.deep_fasting.title" = "Jeûne profond";
+"stages.deep_fasting.line1" = "Le corps s’adapte au jeûne prolongé.";
+"stages.deep_fasting.line2" = "L’efficacité énergétique s’améliore.";
+"stages.deep_fasting.line3" = "Le renouvellement cellulaire reste actif.";
+"stages.deep_fasting.line4" = "Les réserves de graisse sont la principale énergie.";
+
+"stages.extended.title" = "Jeûne prolongé (Suivi uniquement)";
+"stages.extended.line1" = "Le corps fonctionne dans un état de jeûne prolongé.";
+"stages.extended.line2" = "L’utilisation d’énergie se stabilise.";
+"stages.extended.line3" = "Les changements se produisent plus lentement.";
+"stages.extended.line4" = "Cette app fournit un suivi éducatif uniquement.";

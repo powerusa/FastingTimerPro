@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Fasting Timer VIP Pro +</string>
+    <string name="app_subtitle">仅用于教育记录。无医疗建议。</string>
+
+    <string name="common_cancel">取消</string>
+    <string name="common_custom">自定义</string>
+    <string name="common_done">完成</string>
+    <string name="common_start_fast">开始</string>
+    <string name="common_stop">停止</string>
+
+    <string name="dashboard_ring_remaining">剩余</string>
+    <string name="dashboard_ring_custom_time">自定义时间</string>
+    <string name="dashboard_elapsed_format">已进行：%1$s</string>
+    <string name="dashboard_body_title">你的身体正在发生什么</string>
+    <string name="dashboard_extended_tracking_only">长时间禁食仅用于教育目的的记录。</string>
+    <string name="dashboard_next_prefix">下一阶段：</string>
+    <string name="dashboard_start_title">开始禁食</string>
+    <string name="dashboard_start_subtitle">选择目标时长。你可以随时延长。</string>
+    <string name="dashboard_already_started_custom">我已开始（自定义时间）</string>
+    <string name="dashboard_extend_hours_format">+%1$d小时</string>
+    <string name="dashboard_hours_format">%1$d小时</string>
+
+    <string name="planned_duration_fast_format">%1$s 禁食</string>
+
+    <string name="custom_duration_title">自定义禁食时长</string>
+    <string name="custom_duration_subtitle">设置你的目标禁食时间</string>
+    <string name="custom_duration_days">天</string>
+    <string name="custom_duration_hours">小时</string>
+    <string name="custom_duration_total_format">总计：%1$s</string>
+
+    <string name="retroactive_picker_title">自定义开始时间</string>
+    <string name="retroactive_picker_subtitle">选择你开始禁食的时间</string>
+    <string name="retroactive_picker_hours_ago">几小时前</string>
+
+    <string name="history_title">历史记录</string>
+    <string name="history_clear">清除</string>
+    <string name="history_empty_title">暂无记录</string>
+    <string name="history_empty_subtitle">你完成的禁食将显示在这里</string>
+    <string name="history_row_planned_format">/ %1$s</string>
+
+    <string name="settings_title">设置</string>
+    <string name="settings_language">语言</string>
+    <string name="settings_use_device_language">使用设备语言</string>
+
+    <string name="stages_digesting_title">消化中</string>
+    <string name="stages_digesting_line1">你的身体正在消化上一餐。</string>
+    <string name="stages_digesting_line2">血糖和胰岛素较高。</string>
+    <string name="stages_digesting_line3">能量主要来自食物。</string>
+    <string name="stages_digesting_line4">此阶段主要是消化与营养吸收。</string>
+
+    <string name="stages_blood_sugar_title">血糖稳定</string>
+    <string name="stages_blood_sugar_line1">胰岛素水平开始下降。</string>
+    <string name="stages_blood_sugar_line2">血糖更加稳定。</string>
+    <string name="stages_blood_sugar_line3">身体从进食状态转向禁食状态。</string>
+    <string name="stages_blood_sugar_line4">随着胰岛素下降可能会感到饥饿。</string>
+
+    <string name="stages_fat_burning_title">开始燃脂</string>
+    <string name="stages_fat_burning_line1">糖原（储存的糖）减少。</string>
+    <string name="stages_fat_burning_line2">身体更多使用脂肪供能。</string>
+    <string name="stages_fat_burning_line3">生长激素开始上升。</string>
+    <string name="stages_fat_burning_line4">很多人会感到注意力更集中。</string>
+
+    <string name="stages_metabolic_switching_title">代谢切换</string>
+    <string name="stages_metabolic_switching_line1">燃脂效率更高。</string>
+    <string name="stages_metabolic_switching_line2">酮体生成增加。</string>
+    <string name="stages_metabolic_switching_line3">胰岛素保持较低。</string>
+    <string name="stages_metabolic_switching_line4">能量可能更稳定、平和。</string>
+
+    <string name="stages_ketosis_title">酮症与细胞清理</string>
+    <string name="stages_ketosis_line1">酮症加深。</string>
+    <string name="stages_ketosis_line2">身体更依赖脂肪与酮体。</string>
+    <string name="stages_ketosis_line3">细胞回收过程增强。</string>
+    <string name="stages_ketosis_line4">炎症相关过程可能减少。</string>
+
+    <string name="stages_repair_mode_title">修复模式</string>
+    <string name="stages_repair_mode_line1">生长激素水平较高。</string>
+    <string name="stages_repair_mode_line2">细胞维护过程继续。</string>
+    <string name="stages_repair_mode_line3">脂肪利用率仍然较高。</string>
+    <string name="stages_repair_mode_line4">很多人报告精神清晰、专注。</string>
+
+    <string name="stages_deep_fasting_title">深度禁食状态</string>
+    <string name="stages_deep_fasting_line1">身体适应更长时间的禁食。</string>
+    <string name="stages_deep_fasting_line2">能量效率提升。</string>
+    <string name="stages_deep_fasting_line3">细胞更新过程仍然活跃。</string>
+    <string name="stages_deep_fasting_line4">脂肪储备是主要能量来源。</string>
+
+    <string name="stages_extended_title">长时禁食（仅记录）</string>
+    <string name="stages_extended_line1">身体处于长期禁食状态。</string>
+    <string name="stages_extended_line2">能量使用趋于稳定。</string>
+    <string name="stages_extended_line3">变化会更慢、更稳定地发生。</string>
+    <string name="stages_extended_line4">本应用仅提供教育目的的记录。</string>
+</resources>

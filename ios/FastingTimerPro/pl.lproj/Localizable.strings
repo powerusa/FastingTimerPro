@@ -1,0 +1,95 @@
+/* Common */
+"common.cancel" = "Anuluj";
+"common.custom" = "Własny";
+"common.done" = "Gotowe";
+"common.start_fast" = "Rozpocznij post";
+"common.stop" = "Zatrzymaj";
+
+/* Dashboard */
+"dashboard.ring.remaining" = "pozostało";
+"dashboard.ring.custom_time" = "własny czas";
+"dashboard.elapsed_format" = "Upłynęło: %@";
+"dashboard.body_title" = "Co dzieje się w Twoim ciele";
+"dashboard.extended_tracking_only" = "Przedłużone posty są śledzone wyłącznie w celach edukacyjnych.";
+"dashboard.next_prefix" = "Następny:";
+"dashboard.start_title" = "Rozpocznij post";
+"dashboard.start_subtitle" = "Wybierz docelowy czas trwania. Możesz przedłużyć w dowolnym momencie.";
+"dashboard.already_started_custom" = "Już zacząłem (Własny czas)";
+"dashboard.extend_hours_format" = "+%dh";
+"dashboard.hours_format" = "%dh";
+
+/* Planned Duration */
+"planned_duration.fast_format" = "Post %@";
+
+/* Custom Duration Picker */
+"custom_duration.title" = "Własny czas postu";
+"custom_duration.subtitle" = "Ustaw docelowy czas postu";
+"custom_duration.days" = "Dni";
+"custom_duration.hours" = "Godziny";
+"custom_duration.total_format" = "Razem: %@";
+
+/* Retroactive Start Time Picker */
+"retroactive_picker.title" = "Własny czas rozpoczęcia";
+"retroactive_picker.subtitle" = "Wybierz, kiedy zacząłeś post";
+"retroactive_picker.hours_ago" = "Godzin temu";
+
+/* History */
+"history.title" = "Historia";
+"history.clear" = "Wyczyść";
+"history.empty_title" = "Brak postów";
+"history.empty_subtitle" = "Twoje ukończone posty pojawią się tutaj";
+"history.row.planned_format" = "/ %@";
+
+/* Settings */
+"settings.title" = "Ustawienia";
+"settings.language" = "Język";
+"settings.use_device_language" = "Użyj języka urządzenia";
+
+/* Fasting Stages */
+"stages.digesting.title" = "Trawienie";
+"stages.digesting.line1" = "Twoje ciało trawi ostatni posiłek.";
+"stages.digesting.line2" = "Poziom cukru we krwi i insuliny jest podwyższony.";
+"stages.digesting.line3" = "Energia pochodzi głównie z przyjętego pokarmu.";
+"stages.digesting.line4" = "Ta faza dotyczy trawienia i wchłaniania składników odżywczych.";
+
+"stages.blood_sugar.title" = "Stabilizacja poziomu cukru";
+"stages.blood_sugar.line1" = "Poziom insuliny zaczyna spadać.";
+"stages.blood_sugar.line2" = "Poziom cukru we krwi staje się bardziej stabilny.";
+"stages.blood_sugar.line3" = "Ciało zaczyna przechodzić ze stanu sytu do stanu postu.";
+"stages.blood_sugar.line4" = "Głód może się pojawić wraz ze spadkiem insuliny.";
+
+"stages.fat_burning.title" = "Rozpoczęcie spalania tłuszczu";
+"stages.fat_burning.line1" = "Poziom glikogenu (zmagazynowanego cukru) spada.";
+"stages.fat_burning.line2" = "Ciało coraz częściej wykorzystuje tłuszcz jako źródło energii.";
+"stages.fat_burning.line3" = "Poziom hormonu wzrostu zaczyna rosnąć.";
+"stages.fat_burning.line4" = "Wiele osób zauważa poprawę koncentracji.";
+
+"stages.metabolic_switching.title" = "Przełączenie metaboliczne";
+"stages.metabolic_switching.line1" = "Spalanie tłuszczu staje się bardziej efektywne.";
+"stages.metabolic_switching.line2" = "Produkcja ketonów zaczyna rosnąć.";
+"stages.metabolic_switching.line3" = "Insulina pozostaje na niskim poziomie.";
+"stages.metabolic_switching.line4" = "Energia może być stabilna i spokojna.";
+
+"stages.ketosis.title" = "Ketoza i oczyszczanie komórkowe";
+"stages.ketosis.line1" = "Ketoza pogłębia się.";
+"stages.ketosis.line2" = "Ciało w większym stopniu polega na tłuszczu i ketonach.";
+"stages.ketosis.line3" = "Procesy recyklingu komórkowego nasilają się.";
+"stages.ketosis.line4" = "Procesy związane ze stanem zapalnym mogą się zmniejszyć.";
+
+"stages.repair_mode.title" = "Zwiększony tryb naprawy";
+"stages.repair_mode.line1" = "Poziom hormonu wzrostu jest podwyższony.";
+"stages.repair_mode.line2" = "Procesy konserwacji komórkowej trwają nadal.";
+"stages.repair_mode.line3" = "Wykorzystanie tłuszczu pozostaje wysokie.";
+"stages.repair_mode.line4" = "Wielu użytkowników zgłasza jasność umysłu i spokojne skupienie.";
+
+"stages.deep_fasting.title" = "Głęboki stan postu";
+"stages.deep_fasting.line1" = "Ciało adaptuje się do przedłużonego postu.";
+"stages.deep_fasting.line2" = "Efektywność energetyczna poprawia się.";
+"stages.deep_fasting.line3" = "Procesy odnowy komórkowej pozostają aktywne.";
+"stages.deep_fasting.line4" = "Zapasy tłuszczu są głównym źródłem energii.";
+
+"stages.extended.title" = "Przedłużony post (tylko śledzenie)";
+"stages.extended.line1" = "Ciało działa w długoterminowym stanie postu.";
+"stages.extended.line2" = "Zużycie energii stabilizuje się.";
+"stages.extended.line3" = "Zmiany zachodzą wolniej i bardziej stabilnie.";
+"stages.extended.line4" = "Ta aplikacja służy wyłącznie do śledzenia edukacyjnego.";

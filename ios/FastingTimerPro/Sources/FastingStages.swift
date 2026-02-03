@@ -7,89 +7,89 @@ enum FastingStages {
             FastingStage(
                 startHours: 0,
                 endHours: 4,
-                title: "Digesting",
-                descriptionLines: [
-                    "Your body is digesting the last meal.",
-                    "Blood sugar and insulin are elevated.",
-                    "Energy primarily comes from food intake.",
-                    "This phase is about digestion and nutrient absorption."
+                titleKey: "stages.digesting.title",
+                descriptionKeys: [
+                    "stages.digesting.line1",
+                    "stages.digesting.line2",
+                    "stages.digesting.line3",
+                    "stages.digesting.line4"
                 ]
             ),
             FastingStage(
                 startHours: 4,
                 endHours: 12,
-                title: "Blood Sugar Stabilization",
-                descriptionLines: [
-                    "Insulin levels begin to drop.",
-                    "Blood sugar becomes more stable.",
-                    "The body starts transitioning from fed to fasted state.",
-                    "Hunger may appear as insulin decreases."
+                titleKey: "stages.blood_sugar.title",
+                descriptionKeys: [
+                    "stages.blood_sugar.line1",
+                    "stages.blood_sugar.line2",
+                    "stages.blood_sugar.line3",
+                    "stages.blood_sugar.line4"
                 ]
             ),
             FastingStage(
                 startHours: 12,
                 endHours: 18,
-                title: "Fat Burning Begins",
-                descriptionLines: [
-                    "Glycogen (stored sugar) levels decrease.",
-                    "The body increasingly uses fat for energy.",
-                    "Growth hormone levels begin to rise.",
-                    "Many people notice improved mental focus."
+                titleKey: "stages.fat_burning.title",
+                descriptionKeys: [
+                    "stages.fat_burning.line1",
+                    "stages.fat_burning.line2",
+                    "stages.fat_burning.line3",
+                    "stages.fat_burning.line4"
                 ]
             ),
             FastingStage(
                 startHours: 18,
                 endHours: 24,
-                title: "Metabolic Switching",
-                descriptionLines: [
-                    "Fat burning becomes more efficient.",
-                    "Ketone production begins to increase.",
-                    "Insulin remains low.",
-                    "Energy may feel steady and calm."
+                titleKey: "stages.metabolic_switching.title",
+                descriptionKeys: [
+                    "stages.metabolic_switching.line1",
+                    "stages.metabolic_switching.line2",
+                    "stages.metabolic_switching.line3",
+                    "stages.metabolic_switching.line4"
                 ]
             ),
             FastingStage(
                 startHours: 24,
                 endHours: 36,
-                title: "Ketosis & Cellular Cleanup",
-                descriptionLines: [
-                    "Ketosis deepens.",
-                    "The body relies more heavily on fat and ketones.",
-                    "Cellular recycling processes increase.",
-                    "Inflammation-related processes may reduce."
+                titleKey: "stages.ketosis.title",
+                descriptionKeys: [
+                    "stages.ketosis.line1",
+                    "stages.ketosis.line2",
+                    "stages.ketosis.line3",
+                    "stages.ketosis.line4"
                 ]
             ),
             FastingStage(
                 startHours: 36,
                 endHours: 48,
-                title: "Increased Repair Mode",
-                descriptionLines: [
-                    "Growth hormone levels are elevated.",
-                    "Cellular maintenance processes continue.",
-                    "Fat utilization remains high.",
-                    "Many users report mental clarity and calm focus."
+                titleKey: "stages.repair_mode.title",
+                descriptionKeys: [
+                    "stages.repair_mode.line1",
+                    "stages.repair_mode.line2",
+                    "stages.repair_mode.line3",
+                    "stages.repair_mode.line4"
                 ]
             ),
             FastingStage(
                 startHours: 48,
                 endHours: 72,
-                title: "Deep Fasting State",
-                descriptionLines: [
-                    "The body adapts to prolonged fasting.",
-                    "Energy efficiency improves.",
-                    "Cellular renewal processes remain active.",
-                    "Fat stores are the primary energy source."
+                titleKey: "stages.deep_fasting.title",
+                descriptionKeys: [
+                    "stages.deep_fasting.line1",
+                    "stages.deep_fasting.line2",
+                    "stages.deep_fasting.line3",
+                    "stages.deep_fasting.line4"
                 ]
             ),
             FastingStage(
                 startHours: 72,
                 endHours: nil,
-                title: "Extended Fasting (Tracking Only)",
-                descriptionLines: [
-                    "The body operates in a long-term fasting state.",
-                    "Energy use stabilizes.",
-                    "Changes occur more slowly and steadily.",
-                    "This app provides educational tracking only."
+                titleKey: "stages.extended.title",
+                descriptionKeys: [
+                    "stages.extended.line1",
+                    "stages.extended.line2",
+                    "stages.extended.line3",
+                    "stages.extended.line4"
                 ],
                 isExtendedTrackingOnly: true
             )

@@ -1,0 +1,90 @@
+"app.title" = "Fasting Timer VIP Pro +";
+"app.subtitle" = "Educational tracking only. No medical advice.";
+
+"common.cancel" = "Cancel";
+"common.custom" = "Custom";
+"common.done" = "Done";
+"common.start_fast" = "Start Fast";
+"common.stop" = "Stop";
+
+"dashboard.ring.remaining" = "remaining";
+"dashboard.ring.custom_time" = "custom time";
+"dashboard.planned.custom_time" = "Custom time";
+"dashboard.elapsed_format" = "Elapsed: %@";
+"dashboard.body.title" = "What's happening in your body";
+"dashboard.extended_tracking_only" = "Extended fasts are tracked for educational purposes only.";
+"dashboard.next_prefix" = "Next:";
+"dashboard.start.title" = "Start a fast";
+"dashboard.start.subtitle" = "Choose a target duration. You can extend anytime.";
+"dashboard.already_started_custom" = "I already started (Custom time)";
+"dashboard.extend_hours_format" = "+%dh";
+
+"planned_duration.fast_format" = "%@ fast";
+
+"custom_duration.title" = "Custom Fast Duration";
+"custom_duration.subtitle" = "Set your target fasting time";
+"custom_duration.days" = "Days";
+"custom_duration.hours" = "Hours";
+"custom_duration.total_format" = "Total: %@";
+
+"retroactive_picker.title" = "Custom Start Time";
+"retroactive_picker.subtitle" = "Select when you started your fast";
+"retroactive_picker.hours_ago" = "Hours ago";
+
+"history.title" = "History";
+"history.clear" = "Clear";
+"history.empty.title" = "No fasts yet";
+"history.empty.subtitle" = "Your completed fasts will appear here";
+"history.row.planned_format" = "/ %@";
+
+"settings.title" = "Settings";
+"settings.language" = "Language";
+"settings.use_device_language" = "Use device language";
+
+"stages.digesting.title" = "Digesting";
+"stages.digesting.line1" = "Your body is digesting the last meal.";
+"stages.digesting.line2" = "Blood sugar and insulin are elevated.";
+"stages.digesting.line3" = "Energy primarily comes from food intake.";
+"stages.digesting.line4" = "This phase is about digestion and nutrient absorption.";
+
+"stages.blood_sugar.title" = "Blood Sugar Stabilization";
+"stages.blood_sugar.line1" = "Insulin levels begin to drop.";
+"stages.blood_sugar.line2" = "Blood sugar becomes more stable.";
+"stages.blood_sugar.line3" = "The body starts transitioning from fed to fasted state.";
+"stages.blood_sugar.line4" = "Hunger may appear as insulin decreases.";
+
+"stages.fat_burning.title" = "Fat Burning Begins";
+"stages.fat_burning.line1" = "Glycogen (stored sugar) levels decrease.";
+"stages.fat_burning.line2" = "The body increasingly uses fat for energy.";
+"stages.fat_burning.line3" = "Growth hormone levels begin to rise.";
+"stages.fat_burning.line4" = "Many people notice improved mental focus.";
+
+"stages.metabolic_switching.title" = "Metabolic Switching";
+"stages.metabolic_switching.line1" = "Fat burning becomes more efficient.";
+"stages.metabolic_switching.line2" = "Ketone production begins to increase.";
+"stages.metabolic_switching.line3" = "Insulin remains low.";
+"stages.metabolic_switching.line4" = "Energy may feel steady and calm.";
+
+"stages.ketosis.title" = "Ketosis & Cellular Cleanup";
+"stages.ketosis.line1" = "Ketosis deepens.";
+"stages.ketosis.line2" = "The body relies more heavily on fat and ketones.";
+"stages.ketosis.line3" = "Cellular recycling processes increase.";
+"stages.ketosis.line4" = "Inflammation-related processes may reduce.";
+
+"stages.repair_mode.title" = "Increased Repair Mode";
+"stages.repair_mode.line1" = "Growth hormone levels are elevated.";
+"stages.repair_mode.line2" = "Cellular maintenance processes continue.";
+"stages.repair_mode.line3" = "Fat utilization remains high.";
+"stages.repair_mode.line4" = "Many users report mental clarity and calm focus.";
+
+"stages.deep_fasting.title" = "Deep Fasting State";
+"stages.deep_fasting.line1" = "The body adapts to prolonged fasting.";
+"stages.deep_fasting.line2" = "Energy efficiency improves.";
+"stages.deep_fasting.line3" = "Cellular renewal processes remain active.";
+"stages.deep_fasting.line4" = "Fat stores are the primary energy source.";
+
+"stages.extended.title" = "Extended Fasting (Tracking Only)";
+"stages.extended.line1" = "The body operates in a long-term fasting state.";
+"stages.extended.line2" = "Energy use stabilizes.";
+"stages.extended.line3" = "Changes occur more slowly and steadily.";
+"stages.extended.line4" = "This app provides educational tracking only.";

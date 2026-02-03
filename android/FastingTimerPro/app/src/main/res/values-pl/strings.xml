@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Fasting Timer VIP Pro +</string>
+    <string name="app_subtitle">Tylko śledzenie edukacyjne. Brak porad medycznych.</string>
+
+    <string name="common_cancel">Anuluj</string>
+    <string name="common_custom">Własny</string>
+    <string name="common_done">Gotowe</string>
+    <string name="common_start_fast">Rozpocznij post</string>
+    <string name="common_stop">Zatrzymaj</string>
+
+    <string name="dashboard_ring_remaining">pozostało</string>
+    <string name="dashboard_ring_custom_time">własny czas</string>
+    <string name="dashboard_elapsed_format">Upłynęło: %1$s</string>
+    <string name="dashboard_body_title">Co dzieje się w Twoim ciele</string>
+    <string name="dashboard_extended_tracking_only">Przedłużone posty są śledzone wyłącznie w celach edukacyjnych.</string>
+    <string name="dashboard_next_prefix">Następny:</string>
+    <string name="dashboard_start_title">Rozpocznij post</string>
+    <string name="dashboard_start_subtitle">Wybierz docelowy czas trwania. Możesz przedłużyć w dowolnym momencie.</string>
+    <string name="dashboard_already_started_custom">Już zacząłem (Własny czas)</string>
+    <string name="dashboard_extend_hours_format">+%1$dh</string>
+    <string name="dashboard_hours_format">%1$dh</string>
+
+    <string name="planned_duration_fast_format">Post %1$s</string>
+
+    <string name="custom_duration_title">Własny czas postu</string>
+    <string name="custom_duration_subtitle">Ustaw docelowy czas postu</string>
+    <string name="custom_duration_days">Dni</string>
+    <string name="custom_duration_hours">Godziny</string>
+    <string name="custom_duration_total_format">Razem: %1$s</string>
+
+    <string name="retroactive_picker_title">Własny czas rozpoczęcia</string>
+    <string name="retroactive_picker_subtitle">Wybierz, kiedy zacząłeś post</string>
+    <string name="retroactive_picker_hours_ago">Godzin temu</string>
+
+    <string name="history_title">Historia</string>
+    <string name="history_clear">Wyczyść</string>
+    <string name="history_empty_title">Brak postów</string>
+    <string name="history_empty_subtitle">Twoje ukończone posty pojawią się tutaj</string>
+    <string name="history_row_planned_format">/ %1$s</string>
+
+    <string name="settings_title">Ustawienia</string>
+    <string name="settings_language">Język</string>
+    <string name="settings_use_device_language">Użyj języka urządzenia</string>
+
+    <string name="stages_digesting_title">Trawienie</string>
+    <string name="stages_digesting_line1">Twoje ciało trawi ostatni posiłek.</string>
+    <string name="stages_digesting_line2">Poziom cukru we krwi i insuliny jest podwyższony.</string>
+    <string name="stages_digesting_line3">Energia pochodzi głównie z przyjętego pokarmu.</string>
+    <string name="stages_digesting_line4">Ta faza dotyczy trawienia i wchłaniania składników odżywczych.</string>
+
+    <string name="stages_blood_sugar_title">Stabilizacja poziomu cukru</string>
+    <string name="stages_blood_sugar_line1">Poziom insuliny zaczyna spadać.</string>
+    <string name="stages_blood_sugar_line2">Poziom cukru we krwi staje się bardziej stabilny.</string>
+    <string name="stages_blood_sugar_line3">Ciało zaczyna przechodzić ze stanu sytu do stanu postu.</string>
+    <string name="stages_blood_sugar_line4">Głód może się pojawić wraz ze spadkiem insuliny.</string>
+
+    <string name="stages_fat_burning_title">Rozpoczęcie spalania tłuszczu</string>
+    <string name="stages_fat_burning_line1">Poziom glikogenu (zmagazynowanego cukru) spada.</string>
+    <string name="stages_fat_burning_line2">Ciało coraz częściej wykorzystuje tłuszcz jako źródło energii.</string>
+    <string name="stages_fat_burning_line3">Poziom hormonu wzrostu zaczyna rosnąć.</string>
+    <string name="stages_fat_burning_line4">Wiele osób zauważa poprawę koncentracji.</string>
+
+    <string name="stages_metabolic_switching_title">Przełączenie metaboliczne</string>
+    <string name="stages_metabolic_switching_line1">Spalanie tłuszczu staje się bardziej efektywne.</string>
+    <string name="stages_metabolic_switching_line2">Produkcja ketonów zaczyna rosnąć.</string>
+    <string name="stages_metabolic_switching_line3">Insulina pozostaje na niskim poziomie.</string>
+    <string name="stages_metabolic_switching_line4">Energia może być stabilna i spokojna.</string>
+
+    <string name="stages_ketosis_title">Ketoza i oczyszczanie komórkowe</string>
+    <string name="stages_ketosis_line1">Ketoza pogłębia się.</string>
+    <string name="stages_ketosis_line2">Ciało w większym stopniu polega na tłuszczu i ketonach.</string>
+    <string name="stages_ketosis_line3">Procesy recyklingu komórkowego nasilają się.</string>
+    <string name="stages_ketosis_line4">Procesy związane ze stanem zapalnym mogą się zmniejszyć.</string>
+
+    <string name="stages_repair_mode_title">Zwiększony tryb naprawy</string>
+    <string name="stages_repair_mode_line1">Poziom hormonu wzrostu jest podwyższony.</string>
+    <string name="stages_repair_mode_line2">Procesy konserwacji komórkowej trwają nadal.</string>
+    <string name="stages_repair_mode_line3">Wykorzystanie tłuszczu pozostaje wysokie.</string>
+    <string name="stages_repair_mode_line4">Wielu użytkowników zgłasza jasność umysłu i spokojne skupienie.</string>
+
+    <string name="stages_deep_fasting_title">Głęboki stan postu</string>
+    <string name="stages_deep_fasting_line1">Ciało adaptuje się do przedłużonego postu.</string>
+    <string name="stages_deep_fasting_line2">Efektywność energetyczna poprawia się.</string>
+    <string name="stages_deep_fasting_line3">Procesy odnowy komórkowej pozostają aktywne.</string>
+    <string name="stages_deep_fasting_line4">Zapasy tłuszczu są głównym źródłem energii.</string>
+
+    <string name="stages_extended_title">Przedłużony post (tylko śledzenie)</string>
+    <string name="stages_extended_line1">Ciało działa w długoterminowym stanie postu.</string>
+    <string name="stages_extended_line2">Zużycie energii stabilizuje się.</string>
+    <string name="stages_extended_line3">Zmiany zachodzą wolniej i bardziej stabilnie.</string>
+    <string name="stages_extended_line4">Ta aplikacja służy wyłącznie do śledzenia edukacyjnego.</string>
+</resources>

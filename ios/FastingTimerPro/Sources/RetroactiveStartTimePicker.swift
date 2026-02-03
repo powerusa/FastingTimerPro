@@ -2,6 +2,8 @@ import SwiftUI
 
 struct RetroactiveStartTimePicker: View {
 
+    @EnvironmentObject private var localization: LocalizationManager
+
     @Binding var isPresented: Bool
     let onConfirm: (Date) -> Void
 
@@ -27,16 +29,16 @@ struct RetroactiveStartTimePicker: View {
                 }
 
             VStack(spacing: 20) {
-                Text("Custom Start Time")
+                Text(localization.t("retroactive_picker.title"))
                     .font(.system(size: 20, weight: .semibold, design: .rounded))
                     .foregroundStyle(AppColors.primaryText)
 
-                Text("Select when you started your fast")
+                Text(localization.t("retroactive_picker.subtitle"))
                     .font(.system(size: 14, weight: .regular))
                     .foregroundStyle(AppColors.secondaryText)
 
                 VStack(spacing: 8) {
-                    Text("Hours ago")
+                    Text(localization.t("retroactive_picker.hours_ago"))
                         .font(.system(size: 13, weight: .medium))
                         .foregroundStyle(AppColors.secondaryText)
 
@@ -52,7 +54,7 @@ struct RetroactiveStartTimePicker: View {
                     .clipped()
                 }
 
-                Text("Elapsed: \(TimeFormat.hhmmss(max(0, now.timeIntervalSince(startedAt))))")
+                Text(localization.tf("dashboard.elapsed_format", TimeFormat.hhmmss(max(0, now.timeIntervalSince(startedAt)))))
                     .font(.system(size: 16, weight: .medium))
                     .foregroundStyle(AppColors.primaryAccent)
                     .padding(.top, 4)
@@ -61,7 +63,7 @@ struct RetroactiveStartTimePicker: View {
                     Button {
                         isPresented = false
                     } label: {
-                        Text("Cancel")
+                        Text(localization.t("common.cancel"))
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(GlassPillButtonStyle())
@@ -70,7 +72,7 @@ struct RetroactiveStartTimePicker: View {
                         onConfirm(startedAt)
                         isPresented = false
                     } label: {
-                        Text("Start Fast")
+                        Text(localization.t("common.start_fast"))
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(GlassPillButtonStyle(isPrimary: true))

@@ -1,9 +1,11 @@
 package com.fastingtimerpro.app.domain
 
+import androidx.annotation.StringRes
+
 data class FastingStage(
     val startHours: Double,
     val endHours: Double?,
-    val title: String,
-    val descriptionLines: List<String>,
+    @StringRes val titleRes: Int,
+    @StringRes val descriptionLineRes: List<Int>,
     val isExtendedTrackingOnly: Boolean = false
 )

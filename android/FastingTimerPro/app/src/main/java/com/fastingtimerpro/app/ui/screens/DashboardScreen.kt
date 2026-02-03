@@ -28,6 +28,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.res.stringResource
+import com.fastingtimerpro.app.R
 import com.fastingtimerpro.app.domain.CompletedFast
 import com.fastingtimerpro.app.domain.FastingProgressCalculator
 import com.fastingtimerpro.app.domain.FastingSession
@@ -42,6 +44,7 @@ fun DashboardScreen() {
     var activeSession by remember { mutableStateOf<FastingSession?>(null) }
     var showCustomPicker by remember { mutableStateOf(false) }
     var showHistory by remember { mutableStateOf(false) }
+    var showSettings by remember { mutableStateOf(false) }
     var completedFasts by remember { mutableStateOf<List<CompletedFast>>(emptyList()) }
 
     if (showHistory) {
@@ -51,6 +54,11 @@ fun DashboardScreen() {
             onClearHistory = { completedFasts = emptyList() },
             onDeleteFast = { id -> completedFasts = completedFasts.filter { it.id != id } }
         )
+        return
+    }
+
+    if (showSettings) {
+        SettingsScreen(onBack = { showSettings = false })
         return
     }
 
@@ -86,21 +94,28 @@ fun DashboardScreen() {
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        text = "Fasting Timer VIP Pro",
+                        text = stringResource(R.string.app_name),
                         fontSize = 28.sp,
                         fontWeight = FontWeight.SemiBold,
                         color = AppColors.primaryText
                     )
                     Text(
-                        text = "Educational tracking only. No medical advice.",
+                        text = stringResource(R.string.app_subtitle),
                         fontSize = 13.sp,
                         color = AppColors.secondaryText
                     )
                 }
                 Text(
+                    text = "⚙️",
+                    fontSize = 24.sp,
+                    modifier = Modifier.clickable { showSettings = true }
+                )
+                Text(
                     text = "⏱",
                     fontSize = 24.sp,
-                    modifier = Modifier.clickable { showHistory = true }
+                    modifier = Modifier
+                        .padding(start = 12.dp)
+                        .clickable { showHistory = true }
                 )
             }
 
@@ -149,7 +164,7 @@ private fun ActiveSessionContent(
 
     GlassCard {
         Text(
-            text = "Remaining",
+            text = stringResource(R.string.dashboard_ring_remaining),
             fontSize = 14.sp,
             color = AppColors.secondaryText
         )
@@ -168,7 +183,7 @@ private fun ActiveSessionContent(
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "Elapsed: ${formatDuration(progress.elapsed)}",
+            text = stringResource(R.string.dashboard_elapsed_format, formatDuration(progress.elapsed)),
             fontSize = 16.sp,
             color = AppColors.primaryText
         )
@@ -176,20 +191,20 @@ private fun ActiveSessionContent(
 
     GlassCard {
         Text(
-            text = "What's happening in your body",
+            text = stringResource(R.string.dashboard_body_title),
             fontSize = 14.sp,
             color = AppColors.secondaryText
         )
         Spacer(modifier = Modifier.height(6.dp))
         Text(
-            text = progress.currentStage.title,
+            text = stringResource(progress.currentStage.titleRes),
             fontSize = 20.sp,
             fontWeight = FontWeight.SemiBold,
             color = AppColors.primaryAccent
         )
         Spacer(modifier = Modifier.height(6.dp))
         Text(
-            text = progress.currentStage.descriptionLines.joinToString("\n"),
+            text = progress.currentStage.descriptionLineRes.map { stringResource(it) }.joinToString("\n"),
             fontSize = 15.sp,
             color = AppColors.primaryText.copy(alpha = 0.9f)
         )
@@ -198,7 +213,7 @@ private fun ActiveSessionContent(
     if (progress.nextStage != null) {
         GlassCard {
             Text(
-                text = "Next: ${progress.nextStage.title}",
+                text = stringResource(R.string.dashboard_next_prefix) + " " + stringResource(progress.nextStage.titleRes),
                 fontSize = 14.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = AppColors.secondaryAccent
@@ -207,7 +222,7 @@ private fun ActiveSessionContent(
     }
 
     GlassPillButton(
-        text = "Stop Fast",
+        text = stringResource(R.string.common_stop),
         isDestructive = true,
         onClick = onStop,
         modifier = Modifier.fillMaxWidth()
@@ -221,14 +236,14 @@ private fun StartFastContent(
 ) {
     GlassCard {
         Text(
-            text = "Start a fast",
+            text = stringResource(R.string.dashboard_start_title),
             fontSize = 18.sp,
             fontWeight = FontWeight.SemiBold,
             color = AppColors.primaryText
         )
         Spacer(modifier = Modifier.height(6.dp))
         Text(
-            text = "Choose a target duration. You can extend anytime.",
+            text = stringResource(R.string.dashboard_start_subtitle),
             fontSize = 14.sp,
             color = AppColors.secondaryText
         )
@@ -244,7 +259,7 @@ private fun StartFastContent(
             ) {
                 row.forEach { hours ->
                     GlassPillButton(
-                        text = "${hours}h",
+                        text = stringResource(R.string.dashboard_hours_format, hours),
                         isPrimary = true,
                         onClick = { onStartFast(Duration.ofHours(hours.toLong())) },
                         modifier = Modifier.weight(1f)
@@ -257,7 +272,7 @@ private fun StartFastContent(
         }
 
         GlassPillButton(
-            text = "Custom",
+            text = stringResource(R.string.common_custom),
             onClick = onShowCustomPicker,
             modifier = Modifier.fillMaxWidth()
         )

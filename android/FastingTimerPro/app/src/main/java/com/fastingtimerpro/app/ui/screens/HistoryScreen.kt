@@ -32,6 +32,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.res.stringResource
+import com.fastingtimerpro.app.R
 import com.fastingtimerpro.app.domain.CompletedFast
 import com.fastingtimerpro.app.ui.theme.AppColors
 
@@ -73,7 +75,7 @@ fun HistoryScreen(
                 Spacer(modifier = Modifier.weight(1f))
 
                 Text(
-                    text = "History",
+                    text = stringResource(R.string.history_title),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.SemiBold,
                     color = AppColors.primaryText
@@ -84,7 +86,7 @@ fun HistoryScreen(
                 if (completedFasts.isNotEmpty()) {
                     TextButton(onClick = onClearHistory) {
                         Text(
-                            text = "Clear",
+                            text = stringResource(R.string.history_clear),
                             fontSize = 14.sp,
                             color = AppColors.secondaryText
                         )
@@ -126,14 +128,14 @@ private fun EmptyHistoryState() {
         )
         Spacer(modifier = Modifier.height(16.dp))
         Text(
-            text = "No fasts yet",
+            text = stringResource(R.string.history_empty_title),
             fontSize = 18.sp,
             fontWeight = FontWeight.SemiBold,
             color = AppColors.primaryText
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "Your completed fasts will appear here",
+            text = stringResource(R.string.history_empty_subtitle),
             fontSize = 14.sp,
             color = AppColors.secondaryText
         )
@@ -169,7 +171,7 @@ private fun HistoryRow(fast: CompletedFast, onDelete: () -> Unit) {
                         color = AppColors.primaryText
                     )
                     Text(
-                        text = " / ${fast.formattedPlannedDuration}",
+                        text = stringResource(R.string.history_row_planned_format, fast.formattedPlannedDuration),
                         fontSize = 14.sp,
                         color = AppColors.mutedText,
                         modifier = Modifier.padding(bottom = 2.dp)

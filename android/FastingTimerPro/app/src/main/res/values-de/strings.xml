@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Fasting Timer VIP Pro +</string>
+    <string name="app_subtitle">Nur zu Bildungszwecken. Keine medizinische Beratung.</string>
+
+    <string name="common_cancel">Abbrechen</string>
+    <string name="common_custom">Benutzerdefiniert</string>
+    <string name="common_done">Fertig</string>
+    <string name="common_start_fast">Fasten starten</string>
+    <string name="common_stop">Stopp</string>
+
+    <string name="dashboard_ring_remaining">verbleibend</string>
+    <string name="dashboard_ring_custom_time">benutzerdefinierte Zeit</string>
+    <string name="dashboard_elapsed_format">Vergangen: %1$s</string>
+    <string name="dashboard_body_title">Was in deinem Körper passiert</string>
+    <string name="dashboard_extended_tracking_only">Längere Fasten werden nur zu Bildungszwecken erfasst.</string>
+    <string name="dashboard_next_prefix">Als Nächstes:</string>
+    <string name="dashboard_start_title">Fasten starten</string>
+    <string name="dashboard_start_subtitle">Wähle eine Zielzeit. Du kannst jederzeit verlängern.</string>
+    <string name="dashboard_already_started_custom">Ich habe bereits begonnen (Benutzerdefiniert)</string>
+    <string name="dashboard_extend_hours_format">+%1$dh</string>
+    <string name="dashboard_hours_format">%1$dh</string>
+
+    <string name="planned_duration_fast_format">%1$s Fasten</string>
+
+    <string name="custom_duration_title">Benutzerdefinierte Dauer</string>
+    <string name="custom_duration_subtitle">Lege deine Fasten-Zieldauer fest</string>
+    <string name="custom_duration_days">Tage</string>
+    <string name="custom_duration_hours">Stunden</string>
+    <string name="custom_duration_total_format">Gesamt: %1$s</string>
+
+    <string name="retroactive_picker_title">Startzeit</string>
+    <string name="retroactive_picker_subtitle">Wähle, wann du begonnen hast</string>
+    <string name="retroactive_picker_hours_ago">Stunden zuvor</string>
+
+    <string name="history_title">Verlauf</string>
+    <string name="history_clear">Löschen</string>
+    <string name="history_empty_title">Noch keine Fasten</string>
+    <string name="history_empty_subtitle">Deine abgeschlossenen Fasten erscheinen hier</string>
+    <string name="history_row_planned_format">/ %1$s</string>
+
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_language">Sprache</string>
+    <string name="settings_use_device_language">Gerätesprache verwenden</string>
+
+    <string name="stages_digesting_title">Verdauung</string>
+    <string name="stages_digesting_line1">Dein Körper verdaut die letzte Mahlzeit.</string>
+    <string name="stages_digesting_line2">Blutzucker und Insulin sind erhöht.</string>
+    <string name="stages_digesting_line3">Energie kommt hauptsächlich aus der Nahrung.</string>
+    <string name="stages_digesting_line4">Diese Phase umfasst Verdauung und Nährstoffaufnahme.</string>
+
+    <string name="stages_blood_sugar_title">Blutzucker stabilisiert sich</string>
+    <string name="stages_blood_sugar_line1">Der Insulinspiegel beginnt zu sinken.</string>
+    <string name="stages_blood_sugar_line2">Der Blutzucker wird stabiler.</string>
+    <string name="stages_blood_sugar_line3">Der Körper wechselt in den Fastenzustand.</string>
+    <string name="stages_blood_sugar_line4">Hunger kann auftreten, wenn Insulin sinkt.</string>
+
+    <string name="stages_fat_burning_title">Fettverbrennung beginnt</string>
+    <string name="stages_fat_burning_line1">Glykogenspeicher nehmen ab.</string>
+    <string name="stages_fat_burning_line2">Der Körper nutzt zunehmend Fett als Energie.</string>
+    <string name="stages_fat_burning_line3">Wachstumshormon steigt an.</string>
+    <string name="stages_fat_burning_line4">Viele spüren bessere mentale Klarheit.</string>
+
+    <string name="stages_metabolic_switching_title">Stoffwechselumschaltung</string>
+    <string name="stages_metabolic_switching_line1">Fettverbrennung wird effizienter.</string>
+    <string name="stages_metabolic_switching_line2">Die Ketonkörperproduktion steigt.</string>
+    <string name="stages_metabolic_switching_line3">Insulin bleibt niedrig.</string>
+    <string name="stages_metabolic_switching_line4">Energie kann sich stabil anfühlen.</string>
+
+    <string name="stages_ketosis_title">Ketose &amp; Zellreinigung</string>
+    <string name="stages_ketosis_line1">Die Ketose vertieft sich.</string>
+    <string name="stages_ketosis_line2">Der Körper nutzt mehr Fett und Ketone.</string>
+    <string name="stages_ketosis_line3">Zelluläre Recyclingprozesse nehmen zu.</string>
+    <string name="stages_ketosis_line4">Entzündungsprozesse können abnehmen.</string>
+
+    <string name="stages_repair_mode_title">Reparaturmodus</string>
+    <string name="stages_repair_mode_line1">Wachstumshormon ist erhöht.</string>
+    <string name="stages_repair_mode_line2">Zelluläre Wartung läuft weiter.</string>
+    <string name="stages_repair_mode_line3">Fettnutzung bleibt hoch.</string>
+    <string name="stages_repair_mode_line4">Viele berichten von Klarheit und Fokus.</string>
+
+    <string name="stages_deep_fasting_title">Tiefes Fasten</string>
+    <string name="stages_deep_fasting_line1">Der Körper passt sich an längeres Fasten an.</string>
+    <string name="stages_deep_fasting_line2">Energieeffizienz verbessert sich.</string>
+    <string name="stages_deep_fasting_line3">Zell-Erneuerung bleibt aktiv.</string>
+    <string name="stages_deep_fasting_line4">Fettreserven sind die Hauptenergiequelle.</string>
+
+    <string name="stages_extended_title">Erweitertes Fasten (Nur Tracking)</string>
+    <string name="stages_extended_line1">Der Körper befindet sich im langfristigen Fastenzustand.</string>
+    <string name="stages_extended_line2">Energieverbrauch stabilisiert sich.</string>
+    <string name="stages_extended_line3">Veränderungen passieren langsamer.</string>
+    <string name="stages_extended_line4">Diese App dient nur der Bildungsnachverfolgung.</string>
+</resources>

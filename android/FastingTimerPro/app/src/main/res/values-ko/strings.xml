@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Fasting Timer VIP Pro +</string>
+    <string name="app_subtitle">교육용 추적만 제공합니다. 의학적 조언이 아닙니다.</string>
+
+    <string name="common_cancel">취소</string>
+    <string name="common_custom">사용자 지정</string>
+    <string name="common_done">완료</string>
+    <string name="common_start_fast">시작</string>
+    <string name="common_stop">중지</string>
+
+    <string name="dashboard_ring_remaining">남은 시간</string>
+    <string name="dashboard_ring_custom_time">사용자 지정 시간</string>
+    <string name="dashboard_elapsed_format">경과: %1$s</string>
+    <string name="dashboard_body_title">몸에서 일어나는 변화</string>
+    <string name="dashboard_extended_tracking_only">장시간 단식은 교육 목적의 추적으로만 기록됩니다.</string>
+    <string name="dashboard_next_prefix">다음:</string>
+    <string name="dashboard_start_title">단식 시작</string>
+    <string name="dashboard_start_subtitle">목표 시간을 선택하세요. 언제든지 연장할 수 있습니다.</string>
+    <string name="dashboard_already_started_custom">이미 시작함 (사용자 지정 시간)</string>
+    <string name="dashboard_extend_hours_format">+%1$d시간</string>
+    <string name="dashboard_hours_format">%1$d시간</string>
+
+    <string name="planned_duration_fast_format">%1$s 단식</string>
+
+    <string name="custom_duration_title">사용자 지정 단식 시간</string>
+    <string name="custom_duration_subtitle">목표 단식 시간을 설정하세요</string>
+    <string name="custom_duration_days">일</string>
+    <string name="custom_duration_hours">시간</string>
+    <string name="custom_duration_total_format">합계: %1$s</string>
+
+    <string name="retroactive_picker_title">시작 시간</string>
+    <string name="retroactive_picker_subtitle">언제 시작했는지 선택하세요</string>
+    <string name="retroactive_picker_hours_ago">몇 시간 전</string>
+
+    <string name="history_title">기록</string>
+    <string name="history_clear">지우기</string>
+    <string name="history_empty_title">기록 없음</string>
+    <string name="history_empty_subtitle">완료한 단식이 여기에 표시됩니다</string>
+    <string name="history_row_planned_format">/ %1$s</string>
+
+    <string name="settings_title">설정</string>
+    <string name="settings_language">언어</string>
+    <string name="settings_use_device_language">기기 언어 사용</string>
+
+    <string name="stages_digesting_title">소화 중</string>
+    <string name="stages_digesting_line1">몸이 마지막 식사를 소화하고 있습니다.</string>
+    <string name="stages_digesting_line2">혈당과 인슐린이 높습니다.</string>
+    <string name="stages_digesting_line3">에너지는 주로 음식에서 옵니다.</string>
+    <string name="stages_digesting_line4">이 단계는 소화와 영양 흡수입니다.</string>
+
+    <string name="stages_blood_sugar_title">혈당 안정</string>
+    <string name="stages_blood_sugar_line1">인슐린 수치가 내려가기 시작합니다.</string>
+    <string name="stages_blood_sugar_line2">혈당이 더 안정됩니다.</string>
+    <string name="stages_blood_sugar_line3">몸이 금식 상태로 전환됩니다.</string>
+    <string name="stages_blood_sugar_line4">인슐린이 줄면서 배고픔이 나타날 수 있습니다.</string>
+
+    <string name="stages_fat_burning_title">지방 연소 시작</string>
+    <string name="stages_fat_burning_line1">글리코겐(저장된 당)이 감소합니다.</string>
+    <string name="stages_fat_burning_line2">몸이 지방을 에너지로 더 많이 사용합니다.</string>
+    <string name="stages_fat_burning_line3">성장호르몬이 증가하기 시작합니다.</string>
+    <string name="stages_fat_burning_line4">많은 사람들이 집중력 향상을 느낍니다.</string>
+
+    <string name="stages_metabolic_switching_title">대사 전환</string>
+    <string name="stages_metabolic_switching_line1">지방 연소가 더 효율적이 됩니다.</string>
+    <string name="stages_metabolic_switching_line2">케톤 생성이 증가합니다.</string>
+    <string name="stages_metabolic_switching_line3">인슐린은 낮은 상태를 유지합니다.</string>
+    <string name="stages_metabolic_switching_line4">에너지가 안정적으로 느껴질 수 있습니다.</string>
+
+    <string name="stages_ketosis_title">케토시스 및 세포 정리</string>
+    <string name="stages_ketosis_line1">케토시스가 깊어집니다.</string>
+    <string name="stages_ketosis_line2">몸이 지방과 케톤에 더 의존합니다.</string>
+    <string name="stages_ketosis_line3">세포 재활용 과정이 증가합니다.</string>
+    <string name="stages_ketosis_line4">염증 관련 과정이 줄어들 수 있습니다.</string>
+
+    <string name="stages_repair_mode_title">회복 모드</string>
+    <string name="stages_repair_mode_line1">성장호르몬 수치가 높습니다.</string>
+    <string name="stages_repair_mode_line2">세포 유지 관리가 계속됩니다.</string>
+    <string name="stages_repair_mode_line3">지방 이용률이 높게 유지됩니다.</string>
+    <string name="stages_repair_mode_line4">많은 사용자가 정신적 명료함을 보고합니다.</string>
+
+    <string name="stages_deep_fasting_title">심화 단식 상태</string>
+    <string name="stages_deep_fasting_line1">몸이 장시간 단식에 적응합니다.</string>
+    <string name="stages_deep_fasting_line2">에너지 효율이 개선됩니다.</string>
+    <string name="stages_deep_fasting_line3">세포 재생 과정이 지속됩니다.</string>
+    <string name="stages_deep_fasting_line4">지방이 주요 에너지원입니다.</string>
+
+    <string name="stages_extended_title">장시간 단식 (추적 전용)</string>
+    <string name="stages_extended_line1">몸이 장기 단식 상태로 작동합니다.</string>
+    <string name="stages_extended_line2">에너지 사용이 안정됩니다.</string>
+    <string name="stages_extended_line3">변화가 더 천천히 진행됩니다.</string>
+    <string name="stages_extended_line4">이 앱은 교육 목적의 추적만 제공합니다.</string>
+</resources>

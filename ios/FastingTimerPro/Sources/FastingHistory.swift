@@ -7,37 +7,6 @@ struct CompletedFast: Identifiable, Codable, Equatable {
     let plannedDuration: TimeInterval
     let actualDuration: TimeInterval
     let wasCompleted: Bool
-
-    var formattedDate: String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
-        return formatter.string(from: startTime)
-    }
-
-    var formattedActualDuration: String {
-        let hours = Int(actualDuration) / 3600
-        let minutes = (Int(actualDuration) % 3600) / 60
-        if hours >= 24 {
-            let days = hours / 24
-            let remainingHours = hours % 24
-            return "\(days)d \(remainingHours)h \(minutes)m"
-        }
-        return "\(hours)h \(minutes)m"
-    }
-
-    var formattedPlannedDuration: String {
-        let hours = Int(plannedDuration) / 3600
-        if hours >= 24 {
-            let days = hours / 24
-            let remainingHours = hours % 24
-            if remainingHours > 0 {
-                return "\(days)d \(remainingHours)h"
-            }
-            return "\(days)d"
-        }
-        return "\(hours)h"
-    }
 }
 
 @MainActor

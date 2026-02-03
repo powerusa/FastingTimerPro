@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Fasting Timer VIP Pro +</string>
+    <string name="app_subtitle">Apenas acompanhamento educacional. Sem aconselhamento médico.</string>
+
+    <string name="common_cancel">Cancelar</string>
+    <string name="common_custom">Personalizado</string>
+    <string name="common_done">OK</string>
+    <string name="common_start_fast">Iniciar jejum</string>
+    <string name="common_stop">Parar</string>
+
+    <string name="dashboard_ring_remaining">restante</string>
+    <string name="dashboard_ring_custom_time">hora personalizada</string>
+    <string name="dashboard_elapsed_format">Decorrido: %1$s</string>
+    <string name="dashboard_body_title">O que está acontecendo no seu corpo</string>
+    <string name="dashboard_extended_tracking_only">Jejuns prolongados são acompanhados apenas para fins educacionais.</string>
+    <string name="dashboard_next_prefix">Próximo:</string>
+    <string name="dashboard_start_title">Iniciar um jejum</string>
+    <string name="dashboard_start_subtitle">Escolha uma duração alvo. Você pode estender a qualquer momento.</string>
+    <string name="dashboard_already_started_custom">Eu já comecei (Hora personalizada)</string>
+    <string name="dashboard_extend_hours_format">+%1$dh</string>
+    <string name="dashboard_hours_format">%1$dh</string>
+
+    <string name="planned_duration_fast_format">Jejum de %1$s</string>
+
+    <string name="custom_duration_title">Duração personalizada</string>
+    <string name="custom_duration_subtitle">Defina seu tempo alvo de jejum</string>
+    <string name="custom_duration_days">Dias</string>
+    <string name="custom_duration_hours">Horas</string>
+    <string name="custom_duration_total_format">Total: %1$s</string>
+
+    <string name="retroactive_picker_title">Hora de início</string>
+    <string name="retroactive_picker_subtitle">Selecione quando você começou o jejum</string>
+    <string name="retroactive_picker_hours_ago">Horas atrás</string>
+
+    <string name="history_title">Histórico</string>
+    <string name="history_clear">Limpar</string>
+    <string name="history_empty_title">Nenhum jejum ainda</string>
+    <string name="history_empty_subtitle">Seus jejuns concluídos aparecerão aqui</string>
+    <string name="history_row_planned_format">/ %1$s</string>
+
+    <string name="settings_title">Configurações</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_use_device_language">Usar idioma do dispositivo</string>
+
+    <string name="stages_digesting_title">Digestão</string>
+    <string name="stages_digesting_line1">Seu corpo está digerindo a última refeição.</string>
+    <string name="stages_digesting_line2">Glicose e insulina estão elevadas.</string>
+    <string name="stages_digesting_line3">A energia vem principalmente da alimentação.</string>
+    <string name="stages_digesting_line4">Esta fase é sobre digestão e absorção de nutrientes.</string>
+
+    <string name="stages_blood_sugar_title">Estabilização da glicose</string>
+    <string name="stages_blood_sugar_line1">Os níveis de insulina começam a cair.</string>
+    <string name="stages_blood_sugar_line2">A glicose no sangue fica mais estável.</string>
+    <string name="stages_blood_sugar_line3">O corpo transita do estado alimentado para o jejum.</string>
+    <string name="stages_blood_sugar_line4">A fome pode aparecer conforme a insulina diminui.</string>
+
+    <string name="stages_fat_burning_title">Queima de gordura</string>
+    <string name="stages_fat_burning_line1">O glicogênio (açúcar armazenado) diminui.</string>
+    <string name="stages_fat_burning_line2">O corpo usa cada vez mais gordura como energia.</string>
+    <string name="stages_fat_burning_line3">O hormônio do crescimento começa a aumentar.</string>
+    <string name="stages_fat_burning_line4">Muitas pessoas notam melhor foco mental.</string>
+
+    <string name="stages_metabolic_switching_title">Mudança metabólica</string>
+    <string name="stages_metabolic_switching_line1">A queima de gordura fica mais eficiente.</string>
+    <string name="stages_metabolic_switching_line2">A produção de cetonas começa a aumentar.</string>
+    <string name="stages_metabolic_switching_line3">A insulina permanece baixa.</string>
+    <string name="stages_metabolic_switching_line4">A energia pode parecer estável e calma.</string>
+
+    <string name="stages_ketosis_title">Cetose e limpeza celular</string>
+    <string name="stages_ketosis_line1">A cetose se aprofunda.</string>
+    <string name="stages_ketosis_line2">O corpo depende mais de gordura e cetonas.</string>
+    <string name="stages_ketosis_line3">Processos de reciclagem celular aumentam.</string>
+    <string name="stages_ketosis_line4">Processos inflamatórios podem reduzir.</string>
+
+    <string name="stages_repair_mode_title">Modo de reparo</string>
+    <string name="stages_repair_mode_line1">O hormônio do crescimento está elevado.</string>
+    <string name="stages_repair_mode_line2">Processos de manutenção celular continuam.</string>
+    <string name="stages_repair_mode_line3">A utilização de gordura permanece alta.</string>
+    <string name="stages_repair_mode_line4">Muitos relatam clareza mental e foco calmo.</string>
+
+    <string name="stages_deep_fasting_title">Jejum profundo</string>
+    <string name="stages_deep_fasting_line1">O corpo se adapta ao jejum prolongado.</string>
+    <string name="stages_deep_fasting_line2">A eficiência energética melhora.</string>
+    <string name="stages_deep_fasting_line3">A renovação celular continua ativa.</string>
+    <string name="stages_deep_fasting_line4">As reservas de gordura são a principal energia.</string>
+
+    <string name="stages_extended_title">Jejum prolongado (Apenas acompanhamento)</string>
+    <string name="stages_extended_line1">O corpo opera em um estado de jejum de longo prazo.</string>
+    <string name="stages_extended_line2">O uso de energia se estabiliza.</string>
+    <string name="stages_extended_line3">Mudanças ocorrem mais devagar e de forma constante.</string>
+    <string name="stages_extended_line4">Este app oferece apenas acompanhamento educacional.</string>
+</resources>

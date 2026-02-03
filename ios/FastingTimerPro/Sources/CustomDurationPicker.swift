@@ -2,6 +2,8 @@ import SwiftUI
 
 struct CustomDurationPicker: View {
 
+    @EnvironmentObject private var localization: LocalizationManager
+
     @Binding var isPresented: Bool
     let onConfirm: (TimeInterval) -> Void
 
@@ -17,17 +19,17 @@ struct CustomDurationPicker: View {
                 }
 
             VStack(spacing: 20) {
-                Text("Custom Fast Duration")
+                Text(localization.t("custom_duration.title"))
                     .font(.system(size: 20, weight: .semibold, design: .rounded))
                     .foregroundStyle(AppColors.primaryText)
 
-                Text("Set your target fasting time")
+                Text(localization.t("custom_duration.subtitle"))
                     .font(.system(size: 14, weight: .regular))
                     .foregroundStyle(AppColors.secondaryText)
 
                 HStack(spacing: 24) {
                     VStack(spacing: 8) {
-                        Text("Days")
+                        Text(localization.t("custom_duration.days"))
                             .font(.system(size: 13, weight: .medium))
                             .foregroundStyle(AppColors.secondaryText)
 
@@ -44,7 +46,7 @@ struct CustomDurationPicker: View {
                     }
 
                     VStack(spacing: 8) {
-                        Text("Hours")
+                        Text(localization.t("custom_duration.hours"))
                             .font(.system(size: 13, weight: .medium))
                             .foregroundStyle(AppColors.secondaryText)
 
@@ -70,7 +72,7 @@ struct CustomDurationPicker: View {
                     Button {
                         isPresented = false
                     } label: {
-                        Text("Cancel")
+                        Text(localization.t("common.cancel"))
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(GlassPillButtonStyle())
@@ -82,7 +84,7 @@ struct CustomDurationPicker: View {
                             isPresented = false
                         }
                     } label: {
-                        Text("Start Fast")
+                        Text(localization.t("common.start_fast"))
                             .frame(maxWidth: .infinity)
                     }
                     .buttonStyle(GlassPillButtonStyle(isPrimary: true))
@@ -107,12 +109,19 @@ struct CustomDurationPicker: View {
     }
 
     private var totalDurationText: String {
-        if days > 0 && hours > 0 {
-            return "Total: \(days)d \(hours)h"
-        } else if days > 0 {
-            return "Total: \(days) day\(days == 1 ? "" : "s")"
+        let totalSeconds = TimeInterval(totalHours * 3600)
+        let formatter = DateComponentsFormatter()
+        if days > 0 {
+            formatter.allowedUnits = hours > 0 ? [.day, .hour] : [.day]
         } else {
-            return "Total: \(hours) hour\(hours == 1 ? "" : "s")"
+            formatter.allowedUnits = [.hour]
         }
+        formatter.unitsStyle = .abbreviated
+        formatter.maximumUnitCount = 2
+        formatter.zeroFormattingBehavior = [.dropAll]
+        formatter.calendar = Calendar.current
+        formatter.calendar?.locale = Locale(identifier: localization.effectiveLocaleId)
+        let formatted = formatter.string(from: totalSeconds) ?? ""
+        return localization.tf("custom_duration.total_format", formatted)
     }
 }

@@ -1,0 +1,90 @@
+"app.title" = "Fasting Timer VIP Pro +";
+"app.subtitle" = "교육용 추적만 제공합니다. 의학적 조언이 아닙니다.";
+
+"common.cancel" = "취소";
+"common.custom" = "사용자 지정";
+"common.done" = "완료";
+"common.start_fast" = "시작";
+"common.stop" = "중지";
+
+"dashboard.ring.remaining" = "남은 시간";
+"dashboard.ring.custom_time" = "사용자 지정 시간";
+"dashboard.planned.custom_time" = "사용자 지정 시간";
+"dashboard.elapsed_format" = "경과: %@";
+"dashboard.body.title" = "몸에서 일어나는 변화";
+"dashboard.extended_tracking_only" = "장시간 단식은 교육 목적의 추적으로만 기록됩니다.";
+"dashboard.next_prefix" = "다음:";
+"dashboard.start.title" = "단식 시작";
+"dashboard.start.subtitle" = "목표 시간을 선택하세요. 언제든지 연장할 수 있습니다.";
+"dashboard.already_started_custom" = "이미 시작함 (사용자 지정 시간)";
+"dashboard.extend_hours_format" = "+%d시간";
+
+"planned_duration.fast_format" = "%@ 단식";
+
+"custom_duration.title" = "사용자 지정 단식 시간";
+"custom_duration.subtitle" = "목표 단식 시간을 설정하세요";
+"custom_duration.days" = "일";
+"custom_duration.hours" = "시간";
+"custom_duration.total_format" = "합계: %@";
+
+"retroactive_picker.title" = "시작 시간";
+"retroactive_picker.subtitle" = "언제 시작했는지 선택하세요";
+"retroactive_picker.hours_ago" = "몇 시간 전";
+
+"history.title" = "기록";
+"history.clear" = "지우기";
+"history.empty.title" = "기록 없음";
+"history.empty.subtitle" = "완료한 단식이 여기에 표시됩니다";
+"history.row.planned_format" = "/ %@";
+
+"settings.title" = "설정";
+"settings.language" = "언어";
+"settings.use_device_language" = "기기 언어 사용";
+
+"stages.digesting.title" = "소화 중";
+"stages.digesting.line1" = "몸이 마지막 식사를 소화하고 있습니다.";
+"stages.digesting.line2" = "혈당과 인슐린이 높습니다.";
+"stages.digesting.line3" = "에너지는 주로 음식에서 옵니다.";
+"stages.digesting.line4" = "이 단계는 소화와 영양 흡수입니다.";
+
+"stages.blood_sugar.title" = "혈당 안정";
+"stages.blood_sugar.line1" = "인슐린 수치가 내려가기 시작합니다.";
+"stages.blood_sugar.line2" = "혈당이 더 안정됩니다.";
+"stages.blood_sugar.line3" = "몸이 금식 상태로 전환됩니다.";
+"stages.blood_sugar.line4" = "인슐린이 줄면서 배고픔이 나타날 수 있습니다.";
+
+"stages.fat_burning.title" = "지방 연소 시작";
+"stages.fat_burning.line1" = "글리코겐(저장된 당)이 감소합니다.";
+"stages.fat_burning.line2" = "몸이 지방을 에너지로 더 많이 사용합니다.";
+"stages.fat_burning.line3" = "성장호르몬이 증가하기 시작합니다.";
+"stages.fat_burning.line4" = "많은 사람들이 집중력 향상을 느낍니다.";
+
+"stages.metabolic_switching.title" = "대사 전환";
+"stages.metabolic_switching.line1" = "지방 연소가 더 효율적이 됩니다.";
+"stages.metabolic_switching.line2" = "케톤 생성이 증가합니다.";
+"stages.metabolic_switching.line3" = "인슐린은 낮은 상태를 유지합니다.";
+"stages.metabolic_switching.line4" = "에너지가 안정적으로 느껴질 수 있습니다.";
+
+"stages.ketosis.title" = "케토시스 및 세포 정리";
+"stages.ketosis.line1" = "케토시스가 깊어집니다.";
+"stages.ketosis.line2" = "몸이 지방과 케톤에 더 의존합니다.";
+"stages.ketosis.line3" = "세포 재활용 과정이 증가합니다.";
+"stages.ketosis.line4" = "염증 관련 과정이 줄어들 수 있습니다.";
+
+"stages.repair_mode.title" = "회복 모드";
+"stages.repair_mode.line1" = "성장호르몬 수치가 높습니다.";
+"stages.repair_mode.line2" = "세포 유지 관리가 계속됩니다.";
+"stages.repair_mode.line3" = "지방 이용률이 높게 유지됩니다.";
+"stages.repair_mode.line4" = "많은 사용자가 정신적 명료함을 보고합니다.";
+
+"stages.deep_fasting.title" = "심화 단식 상태";
+"stages.deep_fasting.line1" = "몸이 장시간 단식에 적응합니다.";
+"stages.deep_fasting.line2" = "에너지 효율이 개선됩니다.";
+"stages.deep_fasting.line3" = "세포 재생 과정이 지속됩니다.";
+"stages.deep_fasting.line4" = "지방이 주요 에너지원입니다.";
+
+"stages.extended.title" = "장시간 단식 (추적 전용)";
+"stages.extended.line1" = "몸이 장기 단식 상태로 작동합니다.";
+"stages.extended.line2" = "에너지 사용이 안정됩니다.";
+"stages.extended.line3" = "변화가 더 천천히 진행됩니다.";
+"stages.extended.line4" = "이 앱은 교육 목적의 추적만 제공합니다.";

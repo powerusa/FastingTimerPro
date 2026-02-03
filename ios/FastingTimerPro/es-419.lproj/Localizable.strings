@@ -1,0 +1,90 @@
+"app.title" = "Fasting Timer VIP Pro +";
+"app.subtitle" = "Solo seguimiento educativo. Sin consejos médicos.";
+
+"common.cancel" = "Cancelar";
+"common.custom" = "Personalizado";
+"common.done" = "Listo";
+"common.start_fast" = "Iniciar ayuno";
+"common.stop" = "Detener";
+
+"dashboard.ring.remaining" = "restante";
+"dashboard.ring.custom_time" = "hora personalizada";
+"dashboard.planned.custom_time" = "Hora personalizada";
+"dashboard.elapsed_format" = "Transcurrido: %@";
+"dashboard.body.title" = "Qué está pasando en tu cuerpo";
+"dashboard.extended_tracking_only" = "Los ayunos prolongados se registran solo con fines educativos.";
+"dashboard.next_prefix" = "Siguiente:";
+"dashboard.start.title" = "Iniciar un ayuno";
+"dashboard.start.subtitle" = "Elige una duración objetivo. Puedes extenderlo en cualquier momento.";
+"dashboard.already_started_custom" = "Ya empecé (Hora personalizada)";
+"dashboard.extend_hours_format" = "+%dh";
+
+"planned_duration.fast_format" = "Ayuno de %@";
+
+"custom_duration.title" = "Duración personalizada";
+"custom_duration.subtitle" = "Configura tu tiempo objetivo de ayuno";
+"custom_duration.days" = "Días";
+"custom_duration.hours" = "Horas";
+"custom_duration.total_format" = "Total: %@";
+
+"retroactive_picker.title" = "Hora de inicio";
+"retroactive_picker.subtitle" = "Selecciona cuándo empezaste tu ayuno";
+"retroactive_picker.hours_ago" = "Hace (horas)";
+
+"history.title" = "Historial";
+"history.clear" = "Borrar";
+"history.empty.title" = "Aún no hay ayunos";
+"history.empty.subtitle" = "Tus ayunos completados aparecerán aquí";
+"history.row.planned_format" = "/ %@";
+
+"settings.title" = "Ajustes";
+"settings.language" = "Idioma";
+"settings.use_device_language" = "Usar idioma del dispositivo";
+
+"stages.digesting.title" = "Digestión";
+"stages.digesting.line1" = "Tu cuerpo está digiriendo tu última comida.";
+"stages.digesting.line2" = "La glucosa y la insulina están elevadas.";
+"stages.digesting.line3" = "La energía proviene principalmente de lo que comiste.";
+"stages.digesting.line4" = "Esta fase trata de digestión y absorción de nutrientes.";
+
+"stages.blood_sugar.title" = "Estabilización de glucosa";
+"stages.blood_sugar.line1" = "La insulina empieza a bajar.";
+"stages.blood_sugar.line2" = "La glucosa se vuelve más estable.";
+"stages.blood_sugar.line3" = "El cuerpo pasa del estado alimentado al de ayuno.";
+"stages.blood_sugar.line4" = "Puede aparecer hambre a medida que baja la insulina.";
+
+"stages.fat_burning.title" = "Empieza la quema de grasa";
+"stages.fat_burning.line1" = "Disminuye el glucógeno (azúcar almacenada).";
+"stages.fat_burning.line2" = "El cuerpo usa cada vez más grasa como energía.";
+"stages.fat_burning.line3" = "La hormona del crecimiento empieza a subir.";
+"stages.fat_burning.line4" = "Mucha gente nota mejor enfoque mental.";
+
+"stages.metabolic_switching.title" = "Cambio metabólico";
+"stages.metabolic_switching.line1" = "La quema de grasa se vuelve más eficiente.";
+"stages.metabolic_switching.line2" = "Empieza a aumentar la producción de cetonas.";
+"stages.metabolic_switching.line3" = "La insulina se mantiene baja.";
+"stages.metabolic_switching.line4" = "La energía puede sentirse estable y tranquila.";
+
+"stages.ketosis.title" = "Cetosis y limpieza celular";
+"stages.ketosis.line1" = "La cetosis se profundiza.";
+"stages.ketosis.line2" = "El cuerpo depende más de la grasa y las cetonas.";
+"stages.ketosis.line3" = "Aumenta el reciclaje celular.";
+"stages.ketosis.line4" = "La inflamación podría disminuir.";
+
+"stages.repair_mode.title" = "Modo reparación";
+"stages.repair_mode.line1" = "La hormona del crecimiento está elevada.";
+"stages.repair_mode.line2" = "Continúa el mantenimiento celular.";
+"stages.repair_mode.line3" = "El uso de grasa se mantiene alto.";
+"stages.repair_mode.line4" = "Muchos usuarios reportan claridad mental.";
+
+"stages.deep_fasting.title" = "Ayuno profundo";
+"stages.deep_fasting.line1" = "El cuerpo se adapta al ayuno prolongado.";
+"stages.deep_fasting.line2" = "Mejora la eficiencia de energía.";
+"stages.deep_fasting.line3" = "La renovación celular sigue activa.";
+"stages.deep_fasting.line4" = "Las reservas de grasa son la energía principal.";
+
+"stages.extended.title" = "Ayuno extendido (Solo seguimiento)";
+"stages.extended.line1" = "El cuerpo opera en un ayuno de largo plazo.";
+"stages.extended.line2" = "El uso de energía se estabiliza.";
+"stages.extended.line3" = "Los cambios ocurren más lento y constante.";
+"stages.extended.line4" = "Esta app es solo para seguimiento educativo.";

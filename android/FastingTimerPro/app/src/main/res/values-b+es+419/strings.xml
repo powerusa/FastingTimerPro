@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Fasting Timer VIP Pro +</string>
+    <string name="app_subtitle">Solo seguimiento educativo. Sin consejos médicos.</string>
+
+    <string name="common_cancel">Cancelar</string>
+    <string name="common_custom">Personalizado</string>
+    <string name="common_done">Listo</string>
+    <string name="common_start_fast">Iniciar ayuno</string>
+    <string name="common_stop">Detener</string>
+
+    <string name="dashboard_ring_remaining">restante</string>
+    <string name="dashboard_ring_custom_time">hora personalizada</string>
+    <string name="dashboard_elapsed_format">Transcurrido: %1$s</string>
+    <string name="dashboard_body_title">Qué está pasando en tu cuerpo</string>
+    <string name="dashboard_extended_tracking_only">Los ayunos prolongados se registran solo con fines educativos.</string>
+    <string name="dashboard_next_prefix">Siguiente:</string>
+    <string name="dashboard_start_title">Iniciar un ayuno</string>
+    <string name="dashboard_start_subtitle">Elige una duración objetivo. Puedes extenderlo en cualquier momento.</string>
+    <string name="dashboard_already_started_custom">Ya empecé (Hora personalizada)</string>
+    <string name="dashboard_extend_hours_format">+%1$dh</string>
+    <string name="dashboard_hours_format">%1$dh</string>
+
+    <string name="planned_duration_fast_format">Ayuno de %1$s</string>
+
+    <string name="custom_duration_title">Duración personalizada</string>
+    <string name="custom_duration_subtitle">Configura tu tiempo objetivo de ayuno</string>
+    <string name="custom_duration_days">Días</string>
+    <string name="custom_duration_hours">Horas</string>
+    <string name="custom_duration_total_format">Total: %1$s</string>
+
+    <string name="retroactive_picker_title">Hora de inicio</string>
+    <string name="retroactive_picker_subtitle">Selecciona cuándo empezaste tu ayuno</string>
+    <string name="retroactive_picker_hours_ago">Hace (horas)</string>
+
+    <string name="history_title">Historial</string>
+    <string name="history_clear">Borrar</string>
+    <string name="history_empty_title">Aún no hay ayunos</string>
+    <string name="history_empty_subtitle">Tus ayunos completados aparecerán aquí</string>
+    <string name="history_row_planned_format">/ %1$s</string>
+
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_use_device_language">Usar idioma del dispositivo</string>
+
+    <string name="stages_digesting_title">Digestión</string>
+    <string name="stages_digesting_line1">Tu cuerpo está digiriendo tu última comida.</string>
+    <string name="stages_digesting_line2">La glucosa y la insulina están elevadas.</string>
+    <string name="stages_digesting_line3">La energía proviene principalmente de lo que comiste.</string>
+    <string name="stages_digesting_line4">Esta fase trata de digestión y absorción de nutrientes.</string>
+
+    <string name="stages_blood_sugar_title">Estabilización de glucosa</string>
+    <string name="stages_blood_sugar_line1">La insulina empieza a bajar.</string>
+    <string name="stages_blood_sugar_line2">La glucosa se vuelve más estable.</string>
+    <string name="stages_blood_sugar_line3">El cuerpo pasa del estado alimentado al de ayuno.</string>
+    <string name="stages_blood_sugar_line4">Puede aparecer hambre a medida que baja la insulina.</string>
+
+    <string name="stages_fat_burning_title">Empieza la quema de grasa</string>
+    <string name="stages_fat_burning_line1">Disminuye el glucógeno (azúcar almacenada).</string>
+    <string name="stages_fat_burning_line2">El cuerpo usa cada vez más grasa como energía.</string>
+    <string name="stages_fat_burning_line3">La hormona del crecimiento empieza a subir.</string>
+    <string name="stages_fat_burning_line4">Mucha gente nota mejor enfoque mental.</string>
+
+    <string name="stages_metabolic_switching_title">Cambio metabólico</string>
+    <string name="stages_metabolic_switching_line1">La quema de grasa se vuelve más eficiente.</string>
+    <string name="stages_metabolic_switching_line2">Empieza a aumentar la producción de cetonas.</string>
+    <string name="stages_metabolic_switching_line3">La insulina se mantiene baja.</string>
+    <string name="stages_metabolic_switching_line4">La energía puede sentirse estable y tranquila.</string>
+
+    <string name="stages_ketosis_title">Cetosis y limpieza celular</string>
+    <string name="stages_ketosis_line1">La cetosis se profundiza.</string>
+    <string name="stages_ketosis_line2">El cuerpo depende más de la grasa y las cetonas.</string>
+    <string name="stages_ketosis_line3">Aumenta el reciclaje celular.</string>
+    <string name="stages_ketosis_line4">La inflamación podría disminuir.</string>
+
+    <string name="stages_repair_mode_title">Modo reparación</string>
+    <string name="stages_repair_mode_line1">La hormona del crecimiento está elevada.</string>
+    <string name="stages_repair_mode_line2">Continúa el mantenimiento celular.</string>
+    <string name="stages_repair_mode_line3">El uso de grasa se mantiene alto.</string>
+    <string name="stages_repair_mode_line4">Muchos usuarios reportan claridad mental.</string>
+
+    <string name="stages_deep_fasting_title">Ayuno profundo</string>
+    <string name="stages_deep_fasting_line1">El cuerpo se adapta al ayuno prolongado.</string>
+    <string name="stages_deep_fasting_line2">Mejora la eficiencia de energía.</string>
+    <string name="stages_deep_fasting_line3">La renovación celular sigue activa.</string>
+    <string name="stages_deep_fasting_line4">Las reservas de grasa son la energía principal.</string>
+
+    <string name="stages_extended_title">Ayuno extendido (Solo seguimiento)</string>
+    <string name="stages_extended_line1">El cuerpo opera en un ayuno de largo plazo.</string>
+    <string name="stages_extended_line2">El uso de energía se estabiliza.</string>
+    <string name="stages_extended_line3">Los cambios ocurren más lento y constante.</string>
+    <string name="stages_extended_line4">Esta app es solo para seguimiento educativo.</string>
+</resources>

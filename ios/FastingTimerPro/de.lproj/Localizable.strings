@@ -1,0 +1,90 @@
+"app.title" = "Fasting Timer VIP Pro +";
+"app.subtitle" = "Nur zu Bildungszwecken. Keine medizinische Beratung.";
+
+"common.cancel" = "Abbrechen";
+"common.custom" = "Benutzerdefiniert";
+"common.done" = "Fertig";
+"common.start_fast" = "Fasten starten";
+"common.stop" = "Stopp";
+
+"dashboard.ring.remaining" = "verbleibend";
+"dashboard.ring.custom_time" = "benutzerdefinierte Zeit";
+"dashboard.planned.custom_time" = "Benutzerdefiniert";
+"dashboard.elapsed_format" = "Vergangen: %@";
+"dashboard.body.title" = "Was in deinem Körper passiert";
+"dashboard.extended_tracking_only" = "Längere Fasten werden nur zu Bildungszwecken erfasst.";
+"dashboard.next_prefix" = "Als Nächstes:";
+"dashboard.start.title" = "Fasten starten";
+"dashboard.start.subtitle" = "Wähle eine Zielzeit. Du kannst jederzeit verlängern.";
+"dashboard.already_started_custom" = "Ich habe bereits begonnen (Benutzerdefiniert)";
+"dashboard.extend_hours_format" = "+%dh";
+
+"planned_duration.fast_format" = "%@ Fasten";
+
+"custom_duration.title" = "Benutzerdefinierte Dauer";
+"custom_duration.subtitle" = "Lege deine Fasten-Zieldauer fest";
+"custom_duration.days" = "Tage";
+"custom_duration.hours" = "Stunden";
+"custom_duration.total_format" = "Gesamt: %@";
+
+"retroactive_picker.title" = "Startzeit";
+"retroactive_picker.subtitle" = "Wähle, wann du begonnen hast";
+"retroactive_picker.hours_ago" = "Stunden zuvor";
+
+"history.title" = "Verlauf";
+"history.clear" = "Löschen";
+"history.empty.title" = "Noch keine Fasten";
+"history.empty.subtitle" = "Deine abgeschlossenen Fasten erscheinen hier";
+"history.row.planned_format" = "/ %@";
+
+"settings.title" = "Einstellungen";
+"settings.language" = "Sprache";
+"settings.use_device_language" = "Gerätesprache verwenden";
+
+"stages.digesting.title" = "Verdauung";
+"stages.digesting.line1" = "Dein Körper verdaut die letzte Mahlzeit.";
+"stages.digesting.line2" = "Blutzucker und Insulin sind erhöht.";
+"stages.digesting.line3" = "Energie kommt hauptsächlich aus der Nahrung.";
+"stages.digesting.line4" = "Diese Phase umfasst Verdauung und Nährstoffaufnahme.";
+
+"stages.blood_sugar.title" = "Blutzucker stabilisiert sich";
+"stages.blood_sugar.line1" = "Der Insulinspiegel beginnt zu sinken.";
+"stages.blood_sugar.line2" = "Der Blutzucker wird stabiler.";
+"stages.blood_sugar.line3" = "Der Körper wechselt in den Fastenzustand.";
+"stages.blood_sugar.line4" = "Hunger kann auftreten, wenn Insulin sinkt.";
+
+"stages.fat_burning.title" = "Fettverbrennung beginnt";
+"stages.fat_burning.line1" = "Glykogenspeicher nehmen ab.";
+"stages.fat_burning.line2" = "Der Körper nutzt zunehmend Fett als Energie.";
+"stages.fat_burning.line3" = "Wachstumshormon steigt an.";
+"stages.fat_burning.line4" = "Viele spüren bessere mentale Klarheit.";
+
+"stages.metabolic_switching.title" = "Stoffwechselumschaltung";
+"stages.metabolic_switching.line1" = "Fettverbrennung wird effizienter.";
+"stages.metabolic_switching.line2" = "Die Ketonkörperproduktion steigt.";
+"stages.metabolic_switching.line3" = "Insulin bleibt niedrig.";
+"stages.metabolic_switching.line4" = "Energie kann sich stabil anfühlen.";
+
+"stages.ketosis.title" = "Ketose & Zellreinigung";
+"stages.ketosis.line1" = "Die Ketose vertieft sich.";
+"stages.ketosis.line2" = "Der Körper nutzt mehr Fett und Ketone.";
+"stages.ketosis.line3" = "Zelluläre Recyclingprozesse nehmen zu.";
+"stages.ketosis.line4" = "Entzündungsprozesse können abnehmen.";
+
+"stages.repair_mode.title" = "Reparaturmodus";
+"stages.repair_mode.line1" = "Wachstumshormon ist erhöht.";
+"stages.repair_mode.line2" = "Zelluläre Wartung läuft weiter.";
+"stages.repair_mode.line3" = "Fettnutzung bleibt hoch.";
+"stages.repair_mode.line4" = "Viele berichten von Klarheit und Fokus.";
+
+"stages.deep_fasting.title" = "Tiefes Fasten";
+"stages.deep_fasting.line1" = "Der Körper passt sich an längeres Fasten an.";
+"stages.deep_fasting.line2" = "Energieeffizienz verbessert sich.";
+"stages.deep_fasting.line3" = "Zell-Erneuerung bleibt aktiv.";
+"stages.deep_fasting.line4" = "Fettreserven sind die Hauptenergiequelle.";
+
+"stages.extended.title" = "Erweitertes Fasten (Nur Tracking)";
+"stages.extended.line1" = "Der Körper befindet sich im langfristigen Fastenzustand.";
+"stages.extended.line2" = "Energieverbrauch stabilisiert sich.";
+"stages.extended.line3" = "Veränderungen passieren langsamer.";
+"stages.extended.line4" = "Diese App dient nur der Bildungsnachverfolgung.";
