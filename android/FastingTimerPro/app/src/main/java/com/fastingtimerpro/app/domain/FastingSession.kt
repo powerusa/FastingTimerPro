@@ -3,12 +3,18 @@ package com.fastingtimerpro.app.domain
 import java.time.Duration
 import java.time.Instant
 
+enum class FastingSessionStartMode {
+    NOW,
+    RETROACTIVE
+}
+
 data class FastingSession(
     val id: String,
     val startTime: Instant,
     val plannedDuration: Duration,
     val endTime: Instant,
-    val isActive: Boolean
+    val isActive: Boolean,
+    val startMode: FastingSessionStartMode = FastingSessionStartMode.NOW
 ) {
     companion object {
         fun startNow(plannedDuration: Duration, now: Instant = Instant.now()): FastingSession {
@@ -18,7 +24,8 @@ data class FastingSession(
                 startTime = now,
                 plannedDuration = plannedDuration,
                 endTime = now.plus(plannedDuration),
-                isActive = true
+                isActive = true,
+                startMode = FastingSessionStartMode.NOW
             )
         }
 
@@ -33,7 +40,8 @@ data class FastingSession(
                 startTime = startedAt,
                 plannedDuration = plannedDuration,
                 endTime = startedAt.plus(plannedDuration),
-                isActive = true
+                isActive = true,
+                startMode = FastingSessionStartMode.RETROACTIVE
             )
         }
     }

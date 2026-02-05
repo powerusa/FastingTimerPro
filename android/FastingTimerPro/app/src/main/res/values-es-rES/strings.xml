@@ -10,6 +10,7 @@
 
     <string name="dashboard_ring_remaining">restante</string>
     <string name="dashboard_ring_custom_time">hora personalizada</string>
+    <string name="dashboard_planned_custom_time">Ayuno personalizado</string>
     <string name="dashboard_elapsed_format">Transcurrido: %1$s</string>
     <string name="dashboard_body_title">Qué está pasando en tu cuerpo</string>
     <string name="dashboard_extended_tracking_only">Los ayunos prolongados se registran solo con fines educativos.</string>

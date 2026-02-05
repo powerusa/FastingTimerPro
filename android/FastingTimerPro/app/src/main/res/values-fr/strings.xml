@@ -10,6 +10,7 @@
 
     <string name="dashboard_ring_remaining">restant</string>
     <string name="dashboard_ring_custom_time">heure personnalisée</string>
+    <string name="dashboard_planned_custom_time">Jeûne personnalisé</string>
     <string name="dashboard_elapsed_format">Écoulé : %1$s</string>
     <string name="dashboard_body_title">Ce qui se passe dans votre corps</string>
     <string name="dashboard_extended_tracking_only">Les jeûnes prolongés sont suivis à des fins éducatives uniquement.</string>

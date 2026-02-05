@@ -10,6 +10,7 @@
 
     <string name="dashboard_ring_remaining">pozostało</string>
     <string name="dashboard_ring_custom_time">własny czas</string>
+    <string name="dashboard_planned_custom_time">Własny post</string>
     <string name="dashboard_elapsed_format">Upłynęło: %1$s</string>
     <string name="dashboard_body_title">Co dzieje się w Twoim ciele</string>
     <string name="dashboard_extended_tracking_only">Przedłużone posty są śledzone wyłącznie w celach edukacyjnych.</string>

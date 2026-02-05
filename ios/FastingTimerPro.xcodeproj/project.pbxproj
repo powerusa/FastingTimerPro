@@ -20,23 +20,23 @@
 		A1000001011 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002011 /* BackgroundGradient.swift */; };
 		A1000001012 /* ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002012 /* ProgressRing.swift */; };
 		A1000001013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000002013 /* Assets.xcassets */; };
-		A1000001021 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002022 /* Localizable.strings */; };
-		A1000001022 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002023 /* Localizable.strings */; };
-		A1000001023 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002024 /* Localizable.strings */; };
-		A1000001024 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002025 /* Localizable.strings */; };
-		A1000001025 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002026 /* Localizable.strings */; };
-		A1000001026 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002027 /* Localizable.strings */; };
-		A1000001027 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002028 /* Localizable.strings */; };
-		A1000001028 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002029 /* Localizable.strings */; };
-		A1000001029 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002030 /* Localizable.strings */; };
-		A1000001030 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002031 /* Localizable.strings */; };
 		A1000001014 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002015 /* AppColors.swift */; };
 		A1000001015 /* CustomDurationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002016 /* CustomDurationPicker.swift */; };
+		A1000001016 /* FastingHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002017 /* FastingHistory.swift */; };
+		A1000001017 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002018 /* HistoryView.swift */; };
 		A1000001018 /* RetroactiveStartTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002019 /* RetroactiveStartTimePicker.swift */; };
 		A1000001019 /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002020 /* LocalizationManager.swift */; };
 		A1000001020 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002021 /* SettingsView.swift */; };
-		A1000001016 /* FastingHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002017 /* FastingHistory.swift */; };
-		A1000001017 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000002018 /* HistoryView.swift */; };
+		A1000001021 /* en.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002022 /* en.lproj/Localizable.strings */; };
+		A1000001022 /* es-ES.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002023 /* es-ES.lproj/Localizable.strings */; };
+		A1000001023 /* es-419.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002024 /* es-419.lproj/Localizable.strings */; };
+		A1000001024 /* pt-BR.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002025 /* pt-BR.lproj/Localizable.strings */; };
+		A1000001025 /* de.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002026 /* de.lproj/Localizable.strings */; };
+		A1000001026 /* fr.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002027 /* fr.lproj/Localizable.strings */; };
+		A1000001027 /* ja.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002028 /* ja.lproj/Localizable.strings */; };
+		A1000001028 /* ko.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002029 /* ko.lproj/Localizable.strings */; };
+		A1000001029 /* zh-Hans.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002030 /* zh-Hans.lproj/Localizable.strings */; };
+		A1000001030 /* pl.lproj/Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1000002031 /* pl.lproj/Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,21 +56,21 @@
 		A1000002014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1000002015 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		A1000002016 /* CustomDurationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDurationPicker.swift; sourceTree = "<group>"; };
+		A1000002017 /* FastingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingHistory.swift; sourceTree = "<group>"; };
+		A1000002018 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		A1000002019 /* RetroactiveStartTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroactiveStartTimePicker.swift; sourceTree = "<group>"; };
 		A1000002020 /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
 		A1000002021 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		A1000002017 /* FastingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingHistory.swift; sourceTree = "<group>"; };
-		A1000002018 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		A1000002022 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1000002023 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = es-ES.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1000002024 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = es-419.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1000002025 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = pt-BR.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1000002026 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1000002027 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1000002028 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1000002029 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1000002030 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = zh-Hans.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A1000002031 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1000002022 /* en.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1000002023 /* es-ES.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "es-ES.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A1000002024 /* es-419.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A1000002025 /* pt-BR.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A1000002026 /* de.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1000002027 /* fr.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1000002028 /* ja.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1000002029 /* ko.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1000002030 /* zh-Hans.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A1000002031 /* pl.lproj/Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A1000003001 /* FastingTimerPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastingTimerPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,16 +141,16 @@
 		A1000005005 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				A1000002022 /* Localizable.strings */,
-				A1000002023 /* Localizable.strings */,
-				A1000002024 /* Localizable.strings */,
-				A1000002025 /* Localizable.strings */,
-				A1000002026 /* Localizable.strings */,
-				A1000002027 /* Localizable.strings */,
-				A1000002028 /* Localizable.strings */,
-				A1000002029 /* Localizable.strings */,
-				A1000002030 /* Localizable.strings */,
-				A1000002031 /* Localizable.strings */,
+				A1000002022 /* en.lproj/Localizable.strings */,
+				A1000002023 /* es-ES.lproj/Localizable.strings */,
+				A1000002024 /* es-419.lproj/Localizable.strings */,
+				A1000002025 /* pt-BR.lproj/Localizable.strings */,
+				A1000002026 /* de.lproj/Localizable.strings */,
+				A1000002027 /* fr.lproj/Localizable.strings */,
+				A1000002028 /* ja.lproj/Localizable.strings */,
+				A1000002029 /* ko.lproj/Localizable.strings */,
+				A1000002030 /* zh-Hans.lproj/Localizable.strings */,
+				A1000002031 /* pl.lproj/Localizable.strings */,
 			);
 			name = Localization;
 			sourceTree = "<group>";
@@ -214,16 +214,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1000001013 /* Assets.xcassets in Resources */,
-				A1000001021 /* Localizable.strings in Resources */,
-				A1000001022 /* Localizable.strings in Resources */,
-				A1000001023 /* Localizable.strings in Resources */,
-				A1000001024 /* Localizable.strings in Resources */,
-				A1000001025 /* Localizable.strings in Resources */,
-				A1000001026 /* Localizable.strings in Resources */,
-				A1000001027 /* Localizable.strings in Resources */,
-				A1000001028 /* Localizable.strings in Resources */,
-				A1000001029 /* Localizable.strings in Resources */,
-				A1000001030 /* Localizable.strings in Resources */,
+				A1000001021 /* en.lproj/Localizable.strings in Resources */,
+				A1000001022 /* es-ES.lproj/Localizable.strings in Resources */,
+				A1000001023 /* es-419.lproj/Localizable.strings in Resources */,
+				A1000001024 /* pt-BR.lproj/Localizable.strings in Resources */,
+				A1000001025 /* de.lproj/Localizable.strings in Resources */,
+				A1000001026 /* fr.lproj/Localizable.strings in Resources */,
+				A1000001027 /* ja.lproj/Localizable.strings in Resources */,
+				A1000001028 /* ko.lproj/Localizable.strings in Resources */,
+				A1000001029 /* zh-Hans.lproj/Localizable.strings in Resources */,
+				A1000001030 /* pl.lproj/Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +400,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fastintimervippro-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -433,7 +433,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fastintimervippro-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

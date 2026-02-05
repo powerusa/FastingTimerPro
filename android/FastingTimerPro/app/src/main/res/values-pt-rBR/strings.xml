@@ -10,6 +10,7 @@
 
     <string name="dashboard_ring_remaining">restante</string>
     <string name="dashboard_ring_custom_time">hora personalizada</string>
+    <string name="dashboard_planned_custom_time">Jejum personalizado</string>
     <string name="dashboard_elapsed_format">Decorrido: %1$s</string>
     <string name="dashboard_body_title">O que está acontecendo no seu corpo</string>
     <string name="dashboard_extended_tracking_only">Jejuns prolongados são acompanhados apenas para fins educacionais.</string>

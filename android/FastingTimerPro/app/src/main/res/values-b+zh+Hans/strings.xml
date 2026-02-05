@@ -10,6 +10,7 @@
 
     <string name="dashboard_ring_remaining">剩余</string>
     <string name="dashboard_ring_custom_time">自定义时间</string>
+    <string name="dashboard_planned_custom_time">自定义禁食</string>
     <string name="dashboard_elapsed_format">已进行：%1$s</string>
     <string name="dashboard_body_title">你的身体正在发生什么</string>
     <string name="dashboard_extended_tracking_only">长时间禁食仅用于教育目的的记录。</string>

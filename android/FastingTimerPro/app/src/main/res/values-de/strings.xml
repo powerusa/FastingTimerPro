@@ -10,6 +10,7 @@
 
     <string name="dashboard_ring_remaining">verbleibend</string>
     <string name="dashboard_ring_custom_time">benutzerdefinierte Zeit</string>
+    <string name="dashboard_planned_custom_time">Benutzerdefinierte Fastenzeit</string>
     <string name="dashboard_elapsed_format">Vergangen: %1$s</string>
     <string name="dashboard_body_title">Was in deinem Körper passiert</string>
     <string name="dashboard_extended_tracking_only">Längere Fasten werden nur zu Bildungszwecken erfasst.</string>

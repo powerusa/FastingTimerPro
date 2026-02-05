@@ -10,6 +10,7 @@
 
     <string name="dashboard_ring_remaining">残り</string>
     <string name="dashboard_ring_custom_time">カスタム時間</string>
+    <string name="dashboard_planned_custom_time">カスタム断食</string>
     <string name="dashboard_elapsed_format">経過: %1$s</string>
     <string name="dashboard_body_title">体の中で起きていること</string>
     <string name="dashboard_extended_tracking_only">長時間の断食は教育目的でのみ記録されます。</string>

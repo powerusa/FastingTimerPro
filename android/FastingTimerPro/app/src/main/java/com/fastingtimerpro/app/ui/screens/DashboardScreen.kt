@@ -12,7 +12,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -25,14 +28,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.res.stringResource
 import com.fastingtimerpro.app.R
+import com.fastingtimerpro.app.data.SessionManager
 import com.fastingtimerpro.app.domain.CompletedFast
 import com.fastingtimerpro.app.domain.FastingProgressCalculator
 import com.fastingtimerpro.app.domain.FastingSession
+import com.fastingtimerpro.app.domain.FastingSessionStartMode
+import com.fastingtimerpro.app.ui.components.ProgressRing
 import com.fastingtimerpro.app.ui.theme.AppColors
 import java.time.Duration
 import java.time.Instant
@@ -40,19 +47,27 @@ import kotlinx.coroutines.delay
 
 @Composable
 fun DashboardScreen() {
+    val context = LocalContext.current
     var now by remember { mutableStateOf(Instant.now()) }
-    var activeSession by remember { mutableStateOf<FastingSession?>(null) }
+    var activeSession by remember { mutableStateOf(SessionManager.loadSession(context)) }
     var showCustomPicker by remember { mutableStateOf(false) }
+    var showRetroactivePicker by remember { mutableStateOf(false) }
     var showHistory by remember { mutableStateOf(false) }
     var showSettings by remember { mutableStateOf(false) }
-    var completedFasts by remember { mutableStateOf<List<CompletedFast>>(emptyList()) }
+    var completedFasts by remember { mutableStateOf(SessionManager.loadCompletedFasts(context)) }
 
     if (showHistory) {
         HistoryScreen(
             completedFasts = completedFasts,
             onBack = { showHistory = false },
-            onClearHistory = { completedFasts = emptyList() },
-            onDeleteFast = { id -> completedFasts = completedFasts.filter { it.id != id } }
+            onClearHistory = {
+                completedFasts = emptyList()
+                SessionManager.saveCompletedFasts(context, emptyList())
+            },
+            onDeleteFast = { id ->
+                completedFasts = completedFasts.filter { it.id != id }
+                SessionManager.saveCompletedFasts(context, completedFasts)
+            }
         )
         return
     }
@@ -85,7 +100,8 @@ fun DashboardScreen() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(20.dp),
+                .verticalScroll(rememberScrollState())
+                .padding(start = 20.dp, end = 20.dp, bottom = 20.dp, top = 48.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             Row(
@@ -113,6 +129,7 @@ fun DashboardScreen() {
                 Text(
                     text = "⏱",
                     fontSize = 24.sp,
+                    color = AppColors.brightRed,
                     modifier = Modifier
                         .padding(start = 12.dp)
                         .clickable { showHistory = true }
@@ -126,16 +143,26 @@ fun DashboardScreen() {
                     session = activeSession!!,
                     now = now,
                     onStop = {
-                        completedFasts = listOf(CompletedFast.fromSession(activeSession!!)) + completedFasts
+                        val newFasts = listOf(CompletedFast.fromSession(activeSession!!)) + completedFasts
+                        completedFasts = newFasts
                         activeSession = null
+                        SessionManager.saveSession(context, null)
+                        SessionManager.saveCompletedFasts(context, newFasts)
+                    },
+                    onExtend = { duration ->
+                        activeSession = activeSession?.extendBy(duration)
+                        SessionManager.saveSession(context, activeSession)
                     }
                 )
             } else {
                 StartFastContent(
                     onStartFast = { duration ->
-                        activeSession = FastingSession.startNow(plannedDuration = duration)
+                        val newSession = FastingSession.startNow(plannedDuration = duration)
+                        activeSession = newSession
+                        SessionManager.saveSession(context, newSession)
                     },
-                    onShowCustomPicker = { showCustomPicker = true }
+                    onShowCustomPicker = { showCustomPicker = true },
+                    onAlreadyStarted = { showRetroactivePicker = true }
                 )
             }
         }
@@ -145,8 +172,25 @@ fun DashboardScreen() {
         CustomDurationPickerDialog(
             onDismiss = { showCustomPicker = false },
             onConfirm = { duration ->
-                activeSession = FastingSession.startNow(plannedDuration = duration)
+                val newSession = FastingSession.startNow(plannedDuration = duration)
+                activeSession = newSession
+                SessionManager.saveSession(context, newSession)
                 showCustomPicker = false
+            }
+        )
+    }
+
+    if (showRetroactivePicker) {
+        RetroactiveStartTimePickerDialog(
+            onDismiss = { showRetroactivePicker = false },
+            onConfirm = { startTime ->
+                val newSession = FastingSession.startRetroactive(
+                    startedAt = startTime,
+                    plannedDuration = Duration.ofHours(16)
+                )
+                activeSession = newSession
+                SessionManager.saveSession(context, newSession)
+                showRetroactivePicker = false
             }
         )
     }
@@ -156,32 +200,62 @@ fun DashboardScreen() {
 private fun ActiveSessionContent(
     session: FastingSession,
     now: Instant,
-    onStop: () -> Unit
+    onStop: () -> Unit,
+    onExtend: (Duration) -> Unit
 ) {
     val progress = remember(now, session) {
         FastingProgressCalculator.compute(session = session, now = now)
     }
+    val isRetroactive = session.startMode == FastingSessionStartMode.RETROACTIVE
+    val ringTime = if (isRetroactive) progress.elapsed else progress.remaining
+    val ringSubtitle = if (isRetroactive) {
+        stringResource(R.string.dashboard_ring_custom_time)
+    } else {
+        stringResource(R.string.dashboard_ring_remaining)
+    }
+    val plannedLabel = if (isRetroactive) {
+        stringResource(R.string.dashboard_planned_custom_time)
+    } else {
+        formatPlannedDuration(session.plannedDuration)
+    }
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 10.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        ProgressRing(
+            progress = progress.progress01,
+            size = 220.dp,
+            strokeWidth = 14.dp
+        )
+        
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = formatDuration(ringTime),
+                fontSize = 42.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = AppColors.primaryText
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = ringSubtitle,
+                fontSize = 14.sp,
+                color = AppColors.secondaryText
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = plannedLabel,
+                fontSize = 12.sp,
+                color = AppColors.brightRed
+            )
+        }
+    }
 
     GlassCard {
-        Text(
-            text = stringResource(R.string.dashboard_ring_remaining),
-            fontSize = 14.sp,
-            color = AppColors.secondaryText
-        )
-        Spacer(modifier = Modifier.height(4.dp))
-        Text(
-            text = formatDuration(progress.remaining),
-            fontSize = 42.sp,
-            fontWeight = FontWeight.SemiBold,
-            color = AppColors.primaryText
-        )
-        Spacer(modifier = Modifier.height(4.dp))
-        Text(
-            text = formatPlannedDuration(session.plannedDuration),
-            fontSize = 12.sp,
-            color = AppColors.brightRed
-        )
-        Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = stringResource(R.string.dashboard_elapsed_format, formatDuration(progress.elapsed)),
             fontSize = 16.sp,
@@ -221,18 +295,34 @@ private fun ActiveSessionContent(
         }
     }
 
-    GlassPillButton(
-        text = stringResource(R.string.common_stop),
-        isDestructive = true,
-        onClick = onStop,
-        modifier = Modifier.fillMaxWidth()
-    )
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        GlassPillButton(
+            text = stringResource(R.string.dashboard_extend_hours_format, 1),
+            onClick = { onExtend(Duration.ofHours(1)) },
+            modifier = Modifier.weight(1f)
+        )
+        GlassPillButton(
+            text = stringResource(R.string.dashboard_extend_hours_format, 6),
+            onClick = { onExtend(Duration.ofHours(6)) },
+            modifier = Modifier.weight(1f)
+        )
+        GlassPillButton(
+            text = stringResource(R.string.common_stop),
+            isDestructive = true,
+            onClick = onStop,
+            modifier = Modifier.weight(1f)
+        )
+    }
 }
 
 @Composable
 private fun StartFastContent(
     onStartFast: (Duration) -> Unit,
-    onShowCustomPicker: () -> Unit
+    onShowCustomPicker: () -> Unit,
+    onAlreadyStarted: () -> Unit
 ) {
     GlassCard {
         Text(
@@ -249,34 +339,56 @@ private fun StartFastContent(
         )
     }
 
-    val presetHours = listOf(12, 16, 18, 24, 36, 48, 72)
+    val presetPairs = listOf(12 to 16, 18 to 24, 36 to 48)
 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        presetHours.chunked(2).forEach { row ->
+        presetPairs.forEach { (left, right) ->
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                row.forEach { hours ->
-                    GlassPillButton(
-                        text = stringResource(R.string.dashboard_hours_format, hours),
-                        isPrimary = true,
-                        onClick = { onStartFast(Duration.ofHours(hours.toLong())) },
-                        modifier = Modifier.weight(1f)
-                    )
-                }
-                if (row.size == 1) {
-                    Spacer(modifier = Modifier.weight(1f))
-                }
+                GlassPillButton(
+                    text = stringResource(R.string.dashboard_hours_format, left),
+                    isPrimary = true,
+                    onClick = { onStartFast(Duration.ofHours(left.toLong())) },
+                    modifier = Modifier.weight(1f)
+                )
+                GlassPillButton(
+                    text = stringResource(R.string.dashboard_hours_format, right),
+                    isPrimary = true,
+                    onClick = { onStartFast(Duration.ofHours(right.toLong())) },
+                    modifier = Modifier.weight(1f)
+                )
             }
         }
 
-        GlassPillButton(
-            text = stringResource(R.string.common_custom),
-            onClick = onShowCustomPicker,
-            modifier = Modifier.fillMaxWidth()
-        )
+        // 72h and Custom side by side
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            GlassPillButton(
+                text = stringResource(R.string.dashboard_hours_format, 72),
+                isPrimary = true,
+                onClick = { onStartFast(Duration.ofHours(72)) },
+                modifier = Modifier.weight(1f)
+            )
+            GlassPillButton(
+                text = stringResource(R.string.common_custom),
+                isPrimary = true,
+                onClick = onShowCustomPicker,
+                modifier = Modifier.weight(1f)
+            )
+        }
     }
+
+    Spacer(modifier = Modifier.height(8.dp))
+
+    GlassPillButton(
+        text = stringResource(R.string.dashboard_already_started_custom),
+        onClick = onAlreadyStarted,
+        modifier = Modifier.fillMaxWidth()
+    )
 }
 
 @Composable

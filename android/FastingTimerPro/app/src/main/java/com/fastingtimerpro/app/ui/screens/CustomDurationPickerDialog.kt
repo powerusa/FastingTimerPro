@@ -2,6 +2,7 @@ package com.fastingtimerpro.app.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,6 +25,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -74,7 +76,7 @@ fun CustomDurationPickerDialog(
                 Spacer(modifier = Modifier.height(24.dp))
 
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(32.dp),
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     NumberPicker(
@@ -173,7 +175,7 @@ private fun NumberPicker(
 
         Row(
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
+            horizontalArrangement = Arrangement.spacedBy(4.dp)
         ) {
             PickerButton(
                 text = "−",
@@ -183,11 +185,12 @@ private fun NumberPicker(
 
             Text(
                 text = value.toString().padStart(2, '0'),
-                fontSize = 32.sp,
+                fontSize = 28.sp,
                 fontWeight = FontWeight.SemiBold,
                 color = AppColors.brightRed,
-                modifier = Modifier.width(50.dp),
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                modifier = Modifier.width(48.dp),
+                textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                maxLines = 1
             )
 
             PickerButton(
@@ -205,23 +208,25 @@ private fun PickerButton(
     enabled: Boolean,
     onClick: () -> Unit
 ) {
-    Button(
-        onClick = onClick,
-        enabled = enabled,
-        colors = ButtonDefaults.buttonColors(
-            containerColor = AppColors.cardBackground,
-            disabledContainerColor = AppColors.cardBackground.copy(alpha = 0.3f)
-        ),
-        shape = RoundedCornerShape(12.dp),
+    Box(
         modifier = Modifier
-            .width(44.dp)
-            .height(44.dp)
+            .width(38.dp)
+            .height(38.dp)
+            .clip(RoundedCornerShape(10.dp))
+            .background(AppColors.primaryAccent.copy(alpha = if (enabled) 0.15f else 0.05f))
+            .border(
+                width = 1.5.dp,
+                color = AppColors.primaryAccent.copy(alpha = if (enabled) 1f else 0.3f),
+                shape = RoundedCornerShape(10.dp)
+            )
+            .then(if (enabled) Modifier.clickable { onClick() } else Modifier),
+        contentAlignment = Alignment.Center
     ) {
         Text(
             text = text,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
-            color = if (enabled) AppColors.primaryText else AppColors.mutedText
+            color = AppColors.primaryAccent.copy(alpha = if (enabled) 1f else 0.3f)
         )
     }
 }
