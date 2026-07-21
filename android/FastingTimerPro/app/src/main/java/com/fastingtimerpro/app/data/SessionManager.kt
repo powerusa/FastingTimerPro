@@ -2,6 +2,7 @@ package com.fastingtimerpro.app.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import androidx.core.content.edit
 import com.fastingtimerpro.app.domain.CompletedFast
 import com.fastingtimerpro.app.domain.FastingSession
 import com.fastingtimerpro.app.domain.FastingSessionStartMode
@@ -24,23 +25,23 @@ object SessionManager {
     }
 
     fun saveSession(context: Context, session: FastingSession?) {
-        val editor = prefs(context).edit()
-        if (session == null) {
-            editor.remove(KEY_SESSION_ID)
-            editor.remove(KEY_START_TIME)
-            editor.remove(KEY_PLANNED_DURATION)
-            editor.remove(KEY_END_TIME)
-            editor.remove(KEY_IS_ACTIVE)
-            editor.remove(KEY_START_MODE)
-        } else {
-            editor.putString(KEY_SESSION_ID, session.id)
-            editor.putLong(KEY_START_TIME, session.startTime.toEpochMilli())
-            editor.putLong(KEY_PLANNED_DURATION, session.plannedDuration.toMillis())
-            editor.putLong(KEY_END_TIME, session.endTime.toEpochMilli())
-            editor.putBoolean(KEY_IS_ACTIVE, session.isActive)
-            editor.putString(KEY_START_MODE, session.startMode.name)
+        prefs(context).edit {
+            if (session == null) {
+                remove(KEY_SESSION_ID)
+                remove(KEY_START_TIME)
+                remove(KEY_PLANNED_DURATION)
+                remove(KEY_END_TIME)
+                remove(KEY_IS_ACTIVE)
+                remove(KEY_START_MODE)
+            } else {
+                putString(KEY_SESSION_ID, session.id)
+                putLong(KEY_START_TIME, session.startTime.toEpochMilli())
+                putLong(KEY_PLANNED_DURATION, session.plannedDuration.toMillis())
+                putLong(KEY_END_TIME, session.endTime.toEpochMilli())
+                putBoolean(KEY_IS_ACTIVE, session.isActive)
+                putString(KEY_START_MODE, session.startMode.name)
+            }
         }
-        editor.apply()
     }
 
     fun loadSession(context: Context): FastingSession? {
@@ -65,12 +66,10 @@ object SessionManager {
     }
 
     fun saveCompletedFasts(context: Context, fasts: List<CompletedFast>) {
-        val editor = prefs(context).edit()
         val json = fasts.joinToString("|") { fast ->
             "${fast.id},${fast.startTime.toEpochMilli()},${fast.endTime.toEpochMilli()},${fast.plannedDuration.toMillis()},${fast.actualDuration.toMillis()},${fast.wasCompleted}"
         }
-        editor.putString(KEY_COMPLETED_FASTS, json)
-        editor.apply()
+        prefs(context).edit { putString(KEY_COMPLETED_FASTS, json) }
     }
 
     fun loadCompletedFasts(context: Context): List<CompletedFast> {

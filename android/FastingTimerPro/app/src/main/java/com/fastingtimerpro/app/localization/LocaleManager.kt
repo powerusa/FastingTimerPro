@@ -76,18 +76,7 @@ object LocaleManager {
     }
 
     private fun localeFromId(id: String): Locale {
-        return when (id) {
-            "es-ES" -> Locale("es", "ES")
-            "es-419" -> Locale("es", "419")
-            "pt-BR" -> Locale("pt", "BR")
-            "zh-Hans" -> Locale.Builder().setLanguage("zh").setScript("Hans").build()
-            "de" -> Locale("de")
-            "fr" -> Locale("fr")
-            "ja" -> Locale("ja")
-            "ko" -> Locale("ko")
-            "pl" -> Locale("pl")
-            else -> Locale("en")
-        }
+        return Locale.forLanguageTag(id)
     }
 
     fun getSupportedLocales(): List<Pair<String, String>> {

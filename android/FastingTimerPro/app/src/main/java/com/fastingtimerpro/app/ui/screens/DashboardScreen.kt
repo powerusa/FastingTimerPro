@@ -43,6 +43,7 @@ import com.fastingtimerpro.app.ui.components.ProgressRing
 import com.fastingtimerpro.app.ui.theme.AppColors
 import java.time.Duration
 import java.time.Instant
+import java.util.Locale
 import kotlinx.coroutines.delay
 
 @Composable
@@ -101,7 +102,7 @@ fun DashboardScreen() {
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
-                .padding(start = 20.dp, end = 20.dp, bottom = 20.dp, top = 48.dp),
+                .padding(horizontal = 20.dp, vertical = 20.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             Row(
@@ -462,7 +463,7 @@ private fun formatDuration(d: Duration): String {
     val hours = totalSeconds / 3600
     val minutes = (totalSeconds % 3600) / 60
     val seconds = totalSeconds % 60
-    return String.format("%02d:%02d:%02d", hours, minutes, seconds)
+    return String.format(Locale.ROOT, "%02d:%02d:%02d", hours, minutes, seconds)
 }
 
 private fun formatPlannedDuration(d: Duration): String {
