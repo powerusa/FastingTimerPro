@@ -2,6 +2,7 @@ package com.fastingtimerpro.app.localization
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.os.LocaleListCompat
 import java.util.Locale
@@ -33,12 +34,12 @@ object LocaleManager {
 
     fun applyLocale(context: Context) {
         val override = getOverride(context)
-        val effectiveLocale = if (override != null) {
-            localeFromId(override)
+        val localeList = if (override != null && override in supportedLocales) {
+            LocaleListCompat.forLanguageTags(override)
         } else {
-            mapDeviceLocale()
+            // An empty list follows the system instead of pinning the current app language.
+            LocaleListCompat.getEmptyLocaleList()
         }
-        val localeList = LocaleListCompat.create(effectiveLocale)
         AppCompatDelegate.setApplicationLocales(localeList)
     }
 
@@ -54,7 +55,7 @@ object LocaleManager {
     }
 
     private fun mapDeviceLocaleId(): String {
-        val deviceLocale = Locale.getDefault()
+        val deviceLocale = Resources.getSystem().configuration.locales[0]
         val lang = deviceLocale.language
         val country = deviceLocale.country
         val script = deviceLocale.script

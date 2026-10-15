@@ -1,5 +1,6 @@
 package com.fastingtimerpro.app.ui.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -56,6 +57,11 @@ fun DashboardScreen() {
     var showHistory by remember { mutableStateOf(false) }
     var showSettings by remember { mutableStateOf(false) }
     var completedFasts by remember { mutableStateOf(SessionManager.loadCompletedFasts(context)) }
+
+    BackHandler(enabled = showHistory || showSettings) {
+        showHistory = false
+        showSettings = false
+    }
 
     if (showHistory) {
         HistoryScreen(
@@ -466,17 +472,13 @@ private fun formatDuration(d: Duration): String {
     return String.format(Locale.ROOT, "%02d:%02d:%02d", hours, minutes, seconds)
 }
 
+@Composable
 private fun formatPlannedDuration(d: Duration): String {
-    val totalHours = d.toHours()
-    return if (totalHours >= 24) {
-        val days = totalHours / 24
-        val hours = totalHours % 24
-        if (hours > 0) {
-            "$days day${if (days == 1L) "" else "s"} $hours hour${if (hours == 1L) "" else "s"} fast"
-        } else {
-            "$days day${if (days == 1L) "" else "s"} fast"
-        }
-    } else {
-        "$totalHours hour${if (totalHours == 1L) "" else "s"} fast"
-    }
+    val hours = d.toHours()
+    // Use localized resources for the unit and the surrounding phrase.
+    val units = java.text.NumberFormat.getIntegerInstance(
+        LocalContext.current.resources.configuration.locales[0]
+    ).format(hours)
+    val formatted = units + " " + stringResource(R.string.duration_hours_symbol)
+    return stringResource(R.string.planned_duration_fast_format, formatted)
 }

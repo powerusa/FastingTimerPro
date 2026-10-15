@@ -32,3 +32,8 @@ fastlane/test_output/
 
 # Node (if any)
 node_modules/
+
+# Local Android signing credentials
+keystore.properties
+*.jks
+*.keystore

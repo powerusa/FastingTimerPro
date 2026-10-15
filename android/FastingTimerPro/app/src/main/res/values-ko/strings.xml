@@ -90,4 +90,5 @@
     <string name="stages_extended_line2">에너지 사용이 안정됩니다.</string>
     <string name="stages_extended_line3">변화가 더 천천히 진행됩니다.</string>
     <string name="stages_extended_line4">이 앱은 교육 목적의 추적만 제공합니다.</string>
+    <string name="duration_hours_symbol">시간</string>
 </resources>

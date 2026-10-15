@@ -90,4 +90,5 @@
     <string name="stages_extended_line2">Zużycie energii stabilizuje się.</string>
     <string name="stages_extended_line3">Zmiany zachodzą wolniej i bardziej stabilnie.</string>
     <string name="stages_extended_line4">Ta aplikacja służy wyłącznie do śledzenia edukacyjnego.</string>
+    <string name="duration_hours_symbol">godz.</string>
 </resources>

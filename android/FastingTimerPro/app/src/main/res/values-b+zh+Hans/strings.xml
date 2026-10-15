@@ -90,4 +90,5 @@
     <string name="stages_extended_line2">能量使用趋于稳定。</string>
     <string name="stages_extended_line3">变化会更慢、更稳定地发生。</string>
     <string name="stages_extended_line4">本应用仅提供教育目的的记录。</string>
+    <string name="duration_hours_symbol">小时</string>
 </resources>

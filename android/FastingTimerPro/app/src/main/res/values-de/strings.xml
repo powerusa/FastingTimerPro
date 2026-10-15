@@ -90,4 +90,5 @@
     <string name="stages_extended_line2">Energieverbrauch stabilisiert sich.</string>
     <string name="stages_extended_line3">Veränderungen passieren langsamer.</string>
     <string name="stages_extended_line4">Diese App dient nur der Bildungsnachverfolgung.</string>
+    <string name="duration_hours_symbol">h</string>
 </resources>

@@ -90,4 +90,5 @@
     <string name="stages_extended_line2">Energy use stabilizes.</string>
     <string name="stages_extended_line3">Changes occur more slowly and steadily.</string>
     <string name="stages_extended_line4">This app provides educational tracking only.</string>
+    <string name="duration_hours_symbol">h</string>
 </resources>

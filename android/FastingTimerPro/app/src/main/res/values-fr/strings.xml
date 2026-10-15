@@ -90,4 +90,5 @@
     <string name="stages_extended_line2">L\'utilisation d\'énergie se stabilise.</string>
     <string name="stages_extended_line3">Les changements se produisent plus lentement.</string>
     <string name="stages_extended_line4">Cette app fournit un suivi éducatif uniquement.</string>
+    <string name="duration_hours_symbol">h</string>
 </resources>
